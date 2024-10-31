@@ -830,7 +830,11 @@ TODO
 ##
 
 # Paper presentation
+[[Presentation notes]]
 
+##
+
+%% Begin Waypoint %%
 - [[Presentation notes]]
 
-
+%% End Waypoint %%
