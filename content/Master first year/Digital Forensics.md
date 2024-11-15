@@ -336,12 +336,21 @@ Partition table will show us which partition is the active partition, once the s
 - FAT32 -> 28 bits to address available clusters
 
 Hard Drives on the "deletion" of a file, only changes the indexing to signal that the blocks are free and can be overwritten, but we're not deleting the file
-Carving -
+
+**Carving** -> operation that recovers fragments of deleted files, and put together the file back if possible
+
+RAM/file **Slack** -> leftover space inside a cluster after the EOF (End Of File), can contain data of older files, incomplete. applies to HD, may not to SSD.
 
 ## Armi Meeting 14/11/24
 Not relevant to the exam, i just listened B)
 
 I exited quite confused B)
+
+## Computer investigation process
+
+==Timeline analysis==
+Chronology basically
+
 
 
 ##
