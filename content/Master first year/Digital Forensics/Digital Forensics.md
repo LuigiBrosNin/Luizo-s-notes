@@ -1,6 +1,4 @@
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
-
-TODO - Download Autopsy software and FTK (only windows :^)
 #### Info Esame
 Simulazione di un caso giuridico
 t1 e t2 lavorano per azienza x, cambiano azienda / c'e' un caso di accordi che compromettono la proprieta' di dati.
@@ -267,15 +265,6 @@ SSD device *firmware* uses **Wear leveling** -> feature that ensures the storage
 Plugging in the solid-state device can cause the firmware to mode data around, thus not making the hashes of the copy correspond.
 Also, more time passes, the harder it is to restore trashed data because of this.
 
-
-
-
-
-
-
-
-
-
 ## Digital documents
 
 - Many documents are PDFe
@@ -356,20 +345,18 @@ I exited quite confused B)
 	- contains all server connections
 	- contains store locations and configs of drivers
 
-
-
-
 ## Windows Artifact Analysis
 Account user profiles on windows are under the Users folder along with the "`AppData`" folder (that contains a shitload of stuff).
 inside `AppData` there's the `Roaming` folder too, which contains many many info about the history and actions of the user (`local` folder too in AppData)
 
 The Windows Registry is the very heart of the WindowsOS and will be the source of many artifacts, which is a central hierarchical database found in `System32`.
 In Autopsy we can browse the Registry
+
 ##
 
 # Exam
 - exam dates AA 24/25
-	- 2th Jan deadline for papers
+	- 23th Jan deadline for papers
 	- 30th January
 	--- 
 	- 30th Jan deadline for papers
