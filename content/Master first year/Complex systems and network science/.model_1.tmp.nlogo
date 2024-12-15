@@ -115,7 +115,7 @@ to eatFish  ; dolphin procedure to eat
   let prey one-of fishes-here                    ; grab a random fish
   if prey != nobody  [                          ; did we get one? if so,
     ask prey [ die ]                            ; kill it
-    set fishes-eaten fishes-eaten +1
+
   ]
 end
 
