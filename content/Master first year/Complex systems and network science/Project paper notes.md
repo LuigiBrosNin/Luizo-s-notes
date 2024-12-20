@@ -29,7 +29,7 @@ That is, at what point do the survivability of fishes exceeds the dolphin huntin
 A proper state of equilibrium was not achieved during the tests because of the inconsistency of the dolphin's time to eat a given amount of fishes. Instead, every parameter was tested in a neutral environment (no advantage to fishes nor dolphins) to see how the changes affected the given statistics. Interest was particularly given to the number of ticks in the simulation before the fishes got extincts.
 
 First off, the number of fishes in the simulation was estimated to increase the lifespan of the simulation at a directly proportional exponential increase.
-The number of fishes affected the length of the simulation as predicted, but only when fish reproduction was enabled: without it, the increase was linear, and it makes sense
+The number of fishes affected the length of the simulation as predicted, but only when fish reproduction was enabled: without it, the increase was linear, as 
 
 
 
