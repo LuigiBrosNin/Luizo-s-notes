@@ -27,10 +27,23 @@ This led to giving the dolphins the ability to adjust their velocity to catch fi
 Research was conducted to find under what conditions and limits the network is in a state of equilibrium, while still being able to predict where the fishes or the dolphins would dominate the environment.
 That is, at what point do the survivability of fishes exceeds the dolphin hunting effectiveness, and thus we'll see an increase in the population? at what point the population growth will be equal to the lost fishes?
 A proper state of equilibrium was not achieved during the tests because of the inconsistency of the dolphin's time to eat a given amount of fishes. Instead, every parameter was tested in a neutral environment (no advantage to fishes nor dolphins) to see how the changes affected the given statistics. Interest was particularly given to the number of ticks in the simulation before the fishes got extincts.
-
+### 2.2.1 Number of Fishes and Dolphins
 First off, the number of fishes in the simulation was estimated to increase the lifespan of the simulation at a directly proportional exponential increase.
-The number of fishes affected the length of the simulation as predicted, but only when fish reproduction was enabled: without it, the increase was linear, as 
+The number of fishes affected the length of the simulation as predicted, but only when fish reproduction was enabled: without it, the increase was linear, as dolphins can eat one fish at a time. It makes sense that eating double the fishes would require double the time.
+Here some results of the experiments, where each scenario got tested 5 times:
+Without reproduction, 10 dolphins with $\Delta speed =0.2$
+- 1 fish ->
+- 125 fishes -> 
+- 250 fishes -> 
+With reproduction
 
+
+- 250 fishes ->
+
+TODO: repeat experiments with writing behaviour spaces experiments
+
+
+The number of dolphins would then, logically, not be linear, as a dolphin can eat more fishes, but a fish cannot be eaten more than once. Each dolphin is responsible to a percentage of fishes eaten, while each fish is responsible only for itself to be eaten. The expected outcome of the variance in number of ticks
 
 
 - random results
@@ -91,9 +104,7 @@ The number of fishes affected the length of the simulation as predicted, but onl
 
 - predictions + results
 	- initial number of fish -> higher = more ticks, log increase
-		- 1 fish -> 8 ticks
-		- 250 fish -> 80 ticks
-		- 125 fish -> 40 ticks
+
 		Linear increase, makes sense as the dolphins eat linearly
 	- initial number of dolphins -> higher -> less ticks, log decrease
 		1 dolphin -> 1089
