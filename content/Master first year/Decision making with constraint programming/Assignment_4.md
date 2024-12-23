@@ -42,10 +42,5 @@ new model with dummy task
 2. Is searching on EST a good strategy to find an optimal solution? Justify your answer
 	EST didn't manage to find solutions that matched the results found by the default search outside of rcpspData1, where it found the same solution with slightly more time.
 	In any of our experiments, EST timed out or took considerably longer times to achieve a solution that was somewhat close but never better than what the default search was able to find, so it doesn't appear that EST can be considered a good strategy to find optimal solutions compared to the default search.
-	EST is designed to easily find feasible solutions by focusing on scheduling jobs as early as possible, which may not always lead to the global optimal makespan due to the complexity of task-machine interactions or due to the resource constraints in the exercises we conducted.
-	It is not an ideal strategy for finding the **optimal solution** due to its tendency to prioritize early task start times without considering the broader problem structure.
-
-
-Q2: You have written generic descriptions, instead focus on how new solutions would look like with the regular backtracking in EST with proper justification, and how different it is from the optimal (which also motivates another strategy (SetTimes) based on postponing). You can verify it even with the small example used in the slides.
-
-TODO FIX based on this comment
+	To find the optimal solution, the solver needs to explore different task orderings, which requires many failures out of the EST strategy before it changes its order.
+	It is not an ideal strategy for finding the **optimal solution** due to its tendency to prioritize early task start times and deviating from it only after many attempts. The greedy nature of EST is not optimized to find optimal solutions, but rather acceptable solutions in a reasonable time and with low cost commitment (computationally).
