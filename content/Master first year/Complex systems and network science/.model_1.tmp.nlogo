@@ -1149,8 +1149,10 @@ setup</setup>
   <experiment name="baseline-model-exp" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <metric>count ticks</metric>
-    <runMetricsCondition>stop</runMetricsCondition>
+    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
+    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>mean [fishes-eaten] of dolphins</metric>
+    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
       <value value="false"/>
     </enumeratedValueSet>
@@ -1173,7 +1175,11 @@ setup</setup>
       <value value="10"/>
     </enumeratedValueSet>
     <subExperiment>
-      <steppedValueSet variable="initial-number-fish" first="50" step="100" last="200"/>
+      <enumeratedValueSet variable="initial-number-fish">
+        <value value="50"/>
+        <value value="100"/>
+        <value value="200"/>
+      </enumeratedValueSet>
     </subExperiment>
   </experiment>
 </experiments>
