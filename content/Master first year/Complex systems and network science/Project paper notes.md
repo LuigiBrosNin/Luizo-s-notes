@@ -40,23 +40,23 @@ The number of fishes affected the length of the simulation not as predicted, as 
 The number of dolphins would then, logically, not be linear, as a dolphin can eat more fishes, but a fish cannot be eaten more than once. Each dolphin is responsible to a percentage of fishes eaten, while each fish is responsible only for itself to be eaten. The expected outcome of the variance in number of ticks is expected to be of rational type.
 With the experiments
 
-|     |      |
-| --- | ---- |
-| 5   | 2410 |
-| 5   | 2508 |
-| 10  | 693  |
-| 10  | 467  |
-| 5   | 5220 |
-| 10  | 508  |
-| 10  | 551  |
-| 10  | 789  |
-| 20  | 213  |
-| 20  | 270  |
-| 20  | 316  |
-| 20  | 271  |
-| 20  | 323  |
-| 5   | 5934 |
-| 5   | 5511 |
+|     |      |     |     |
+| --- | ---- | --- | --- |
+| 5   | 2410 |     |     |
+| 5   | 2508 |     |     |
+| 10  | 693  |     |     |
+| 10  | 467  |     |     |
+| 5   | 5220 |     |     |
+| 10  | 508  |     |     |
+| 10  | 551  |     |     |
+| 10  | 789  |     |     |
+| 20  | 213  |     |     |
+| 20  | 270  |     |     |
+| 20  | 316  |     |     |
+| 20  | 271  |     |     |
+| 20  | 323  |     |     |
+| 5   | 5934 |     |     |
+| 5   | 5511 |     |     |
 
 
 
