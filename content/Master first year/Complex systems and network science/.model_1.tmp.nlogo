@@ -1146,7 +1146,7 @@ setup</setup>
       </enumeratedValueSet>
     </subExperiment>
   </experiment>
-  <experiment name="baseline-model-exp" repetitions="5" runMetricsEveryStep="false">
+  <experiment name="1-fish-population" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
     <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
