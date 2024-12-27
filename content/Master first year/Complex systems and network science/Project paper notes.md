@@ -33,7 +33,9 @@ Fish speed: 1 cell
 Fish reproduction rate: 150 ticks
 Dolphin population: 10 turtles
 Fish population: 100 turtles
-### 2.2.1 Number of Fishes and Dolphins
+
+All the experiment results are present in the report, with the corresponding name as a csv file.
+### 2.2.1 Population
 First off, the number of fishes in the simulation was estimated to increase the lifespan of the simulation at a directly proportional exponential increase.
 The number of fishes affected the length of the simulation not as predicted, as the increase seemed linear. This is because dolphins can eat one fish at a time. It makes sense that eating more fishes would require more time, hence the proportional increase in fish population and ticks elapsed.
 
@@ -41,6 +43,8 @@ The number of dolphins would then, logically, not be linear, as a dolphin can ea
 With the experiments the predictions got confirmed especially when reproduction was enabled. Each dolphin made a huge impact on ticks elapsed, as well as fishes eaten per tick, being as high as 0.699, but retaining a much higher mean compared to the experiment with reproduction off.
 The mean of fishes eaten skyrockets when there are fewer dolphins in a reproduction enabled environment, as the fishes have more chances to reproduce, making the total
 population of fishes existed greater than in other simulations with higher amounts of dolphins.
+
+### 2.2.2 Speed
 
 
 - random results
