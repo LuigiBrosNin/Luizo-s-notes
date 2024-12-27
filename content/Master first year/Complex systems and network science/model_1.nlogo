@@ -5,12 +5,15 @@ breed [ dolphins dolphin ]
 fishes-own [ lifetime fish-reproduce ]
 dolphins-own [ fishes-eaten ]
 
+globals [ max_turtles ]
+
 to setup
   clear-all
 
   ; blue background
   ask patches [ set pcolor blue ]
 
+  set max_turtles 2000
 
   create-fishes initial-number-fish ; create the fishes, then initialize their variables
   [
@@ -36,10 +39,12 @@ to setup
 end
 
 to go
-  ; stop the model if there are no turtles
-  if not any? turtles [ stop ]
-  ; stop the model if there are no dolphins
+  ; stop the model if there are no turtles or if there are too many turtles in the simulation
+  if not any? turtles or count turtles > max_turtles [ stop ]
+
   if not any? fishes [ user-message "The dolphins have inherited the earth" stop ]
+
+  if count turtles > max_turtles [ user-message "Turtles limit reached" stop ]
 
   ask fishes [ ; fish logic
 
@@ -879,273 +884,6 @@ repeat 75 [ go ]
 @#$#@#$#@
 @#$#@#$#@
 <experiments>
-  <experiment name="New BehaviorSpace Features" repetitions="3" runMetricsEveryStep="false">
-    <preExperiment>reset-timer</preExperiment>
-    <setup>setup</setup>
-    <go>go</go>
-    <postExperiment>show timer</postExperiment>
-    <timeLimit steps="200"/>
-    <metric>count sheep</metric>
-    <metric>count wolves</metric>
-    <metric>[ xcor ] of sheep</metric>
-    <metric>[ ycor ] of sheep</metric>
-    <metric>[ xcor ] of wolves</metric>
-    <metric>[ ycor ] of wolves</metric>
-    <runMetricsCondition>ticks mod 2 = 0</runMetricsCondition>
-    <subExperiment>
-      <steppedValueSet variable="wolf-gain-from-food" first="30" step="5" last="50"/>
-    </subExperiment>
-  </experiment>
-  <experiment name="BehaviorSpace run 3 experiments" repetitions="1" runMetricsEveryStep="false">
-    <setup>setup
-print (word "sheep-reproduce: " sheep-reproduce ", wolf-reproduce: " wolf-reproduce)
-print (word "sheep-gain-from-food: " sheep-gain-from-food ", wolf-gain-from-food: " wolf-gain-from-food)</setup>
-    <go>go</go>
-    <postRun>print (word "sheep: " count sheep ", wolves: " count wolves)
-print ""
-wait 1</postRun>
-    <timeLimit steps="1500"/>
-    <metric>count sheep</metric>
-    <metric>count wolves</metric>
-    <metric>count grass</metric>
-    <runMetricsCondition>ticks mod 10 = 0</runMetricsCondition>
-    <enumeratedValueSet variable="model-version">
-      <value value="&quot;sheep-wolves-grass&quot;"/>
-    </enumeratedValueSet>
-    <subExperiment>
-      <enumeratedValueSet variable="sheep-reproduce">
-        <value value="1"/>
-      </enumeratedValueSet>
-      <enumeratedValueSet variable="sheep-gain-from-food">
-        <value value="1"/>
-      </enumeratedValueSet>
-      <enumeratedValueSet variable="wolf-reproduce">
-        <value value="2"/>
-      </enumeratedValueSet>
-      <enumeratedValueSet variable="wolf-gain-from-food">
-        <value value="10"/>
-      </enumeratedValueSet>
-    </subExperiment>
-    <subExperiment>
-      <enumeratedValueSet variable="sheep-reproduce">
-        <value value="6"/>
-      </enumeratedValueSet>
-      <enumeratedValueSet variable="sheep-gain-from-food">
-        <value value="8"/>
-      </enumeratedValueSet>
-      <enumeratedValueSet variable="wolf-reproduce">
-        <value value="5"/>
-      </enumeratedValueSet>
-      <enumeratedValueSet variable="wolf-gain-from-food">
-        <value value="20"/>
-      </enumeratedValueSet>
-    </subExperiment>
-    <subExperiment>
-      <enumeratedValueSet variable="sheep-reproduce">
-        <value value="20"/>
-      </enumeratedValueSet>
-      <enumeratedValueSet variable="sheep-gain-from-food">
-        <value value="15"/>
-      </enumeratedValueSet>
-      <enumeratedValueSet variable="wolf-reproduce">
-        <value value="15"/>
-      </enumeratedValueSet>
-      <enumeratedValueSet variable="wolf-gain-from-food">
-        <value value="30"/>
-      </enumeratedValueSet>
-    </subExperiment>
-  </experiment>
-  <experiment name="BehaviorSpace run 3 variable values per experiments" repetitions="1" runMetricsEveryStep="false">
-    <setup>setup
-print (word "sheep-reproduce: " sheep-reproduce ", wolf-reproduce: " wolf-reproduce)
-print (word "sheep-gain-from-food: " sheep-gain-from-food ", wolf-gain-from-food: " wolf-gain-from-food)</setup>
-    <go>go</go>
-    <postRun>print (word "sheep: " count sheep ", wolves: " count wolves)
-print ""
-wait 1</postRun>
-    <timeLimit steps="1500"/>
-    <metric>count sheep</metric>
-    <metric>count wolves</metric>
-    <metric>count grass</metric>
-    <runMetricsCondition>ticks mod 10 = 0</runMetricsCondition>
-    <enumeratedValueSet variable="model-version">
-      <value value="&quot;sheep-wolves-grass&quot;"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="sheep-reproduce">
-      <value value="4"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="wolf-reproduce">
-      <value value="2"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="sheep-gain-from-food">
-      <value value="4"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="wolf-gain-from-food">
-      <value value="20"/>
-    </enumeratedValueSet>
-    <subExperiment>
-      <enumeratedValueSet variable="sheep-reproduce">
-        <value value="1"/>
-        <value value="6"/>
-        <value value="20"/>
-      </enumeratedValueSet>
-    </subExperiment>
-    <subExperiment>
-      <enumeratedValueSet variable="wolf-reproduce">
-        <value value="2"/>
-        <value value="7"/>
-        <value value="15"/>
-      </enumeratedValueSet>
-    </subExperiment>
-    <subExperiment>
-      <enumeratedValueSet variable="sheep-gain-from-food">
-        <value value="1"/>
-        <value value="8"/>
-        <value value="15"/>
-      </enumeratedValueSet>
-    </subExperiment>
-    <subExperiment>
-      <enumeratedValueSet variable="wolf-gain-from-food">
-        <value value="10"/>
-        <value value="20"/>
-        <value value="30"/>
-      </enumeratedValueSet>
-    </subExperiment>
-  </experiment>
-  <experiment name="BehaviorSpace subset" repetitions="1" runMetricsEveryStep="false">
-    <setup>setup</setup>
-    <go>go</go>
-    <postRun>wait .5</postRun>
-    <timeLimit steps="1500"/>
-    <metric>count sheep</metric>
-    <metric>count wolves</metric>
-    <metric>count grass</metric>
-    <runMetricsCondition>ticks mod 10 = 0</runMetricsCondition>
-    <enumeratedValueSet variable="model-version">
-      <value value="&quot;sheep-wolves-grass&quot;"/>
-    </enumeratedValueSet>
-    <subExperiment>
-      <enumeratedValueSet variable="wolf-reproduce">
-        <value value="3"/>
-        <value value="5"/>
-      </enumeratedValueSet>
-      <enumeratedValueSet variable="wolf-gain-from-food">
-        <value value="30"/>
-        <value value="40"/>
-      </enumeratedValueSet>
-    </subExperiment>
-    <subExperiment>
-      <enumeratedValueSet variable="wolf-reproduce">
-        <value value="10"/>
-        <value value="15"/>
-      </enumeratedValueSet>
-      <enumeratedValueSet variable="wolf-gain-from-food">
-        <value value="10"/>
-        <value value="15"/>
-      </enumeratedValueSet>
-    </subExperiment>
-  </experiment>
-  <experiment name="BehaviorSpace combinatorial" repetitions="1" runMetricsEveryStep="false">
-    <setup>setup</setup>
-    <go>go</go>
-    <postRun>wait .5</postRun>
-    <timeLimit steps="1500"/>
-    <metric>count sheep</metric>
-    <metric>count wolves</metric>
-    <metric>count grass</metric>
-    <runMetricsCondition>ticks mod 10 = 0</runMetricsCondition>
-    <enumeratedValueSet variable="model-version">
-      <value value="&quot;sheep-wolves-grass&quot;"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="wolf-reproduce">
-      <value value="3"/>
-      <value value="5"/>
-      <value value="10"/>
-      <value value="15"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="wolf-gain-from-food">
-      <value value="10"/>
-      <value value="15"/>
-      <value value="30"/>
-      <value value="40"/>
-    </enumeratedValueSet>
-  </experiment>
-  <experiment name="Wolf Sheep Crossing" repetitions="4" runMetricsEveryStep="false">
-    <setup>setup</setup>
-    <go>go</go>
-    <timeLimit steps="1500"/>
-    <metric>count sheep</metric>
-    <metric>count wolves</metric>
-    <runMetricsCondition>count sheep = count wolves</runMetricsCondition>
-    <enumeratedValueSet variable="wolf-gain-from-food">
-      <value value="20"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="show-energy?">
-      <value value="false"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="wolf-reproduce">
-      <value value="5"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="initial-number-wolves">
-      <value value="50"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="initial-number-sheep">
-      <value value="100"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="model-version">
-      <value value="&quot;sheep-wolves-grass&quot;"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="sheep-gain-from-food">
-      <value value="4"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="grass-regrowth-time">
-      <value value="30"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="sheep-reproduce">
-      <value value="4"/>
-    </enumeratedValueSet>
-  </experiment>
-  <experiment name="New BehaviorSpace Features reproducible" repetitions="3" runMetricsEveryStep="false">
-    <preExperiment>reset-timer</preExperiment>
-    <setup>random-seed (474 + behaviorspace-run-number)
-
-setup</setup>
-    <go>go</go>
-    <postExperiment>show timer</postExperiment>
-    <timeLimit steps="200"/>
-    <metric>count sheep</metric>
-    <metric>count wolves</metric>
-    <metric>[ xcor ] of sheep</metric>
-    <metric>[ ycor ] of sheep</metric>
-    <metric>[ xcor ] of wolves</metric>
-    <metric>[ ycor ] of wolves</metric>
-    <runMetricsCondition>ticks mod 2 = 0</runMetricsCondition>
-    <enumeratedValueSet variable="model-version">
-      <value value="&quot;sheep-wolves-grass&quot;"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="wolf-gain-from-food">
-      <value value="20"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="show-energy?">
-      <value value="false"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="wolf-reproduce">
-      <value value="5"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="initial-number-wolves">
-      <value value="50"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="initial-number-sheep">
-      <value value="100"/>
-    </enumeratedValueSet>
-    <subExperiment>
-      <enumeratedValueSet variable="wolf-gain-from-food">
-        <value value="10"/>
-        <value value="20"/>
-        <value value="30"/>
-      </enumeratedValueSet>
-    </subExperiment>
-  </experiment>
   <experiment name="1-fish-population" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
@@ -1154,7 +892,7 @@ setup</setup>
     <metric>mean [fishes-eaten] of dolphins</metric>
     <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
-      <value value="true"/>
+      <value value="false"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="speed-dolphin">
       <value value="1.2"/>
@@ -1190,6 +928,78 @@ setup</setup>
     <metric>mean [fishes-eaten] of dolphins</metric>
     <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="speed-dolphin">
+      <value value="1.2"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dolphin-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-reproduction-rate">
+      <value value="150"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="speed-fish">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-fish">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <subExperiment>
+      <enumeratedValueSet variable="initial-number-dolphins">
+        <value value="5"/>
+        <value value="10"/>
+        <value value="20"/>
+      </enumeratedValueSet>
+    </subExperiment>
+  </experiment>
+  <experiment name="1-fish-population-reproduction" repetitions="5" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
+    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>mean [fishes-eaten] of dolphins</metric>
+    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <enumeratedValueSet variable="fish-reproduction">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="speed-dolphin">
+      <value value="1.2"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dolphin-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-reproduction-rate">
+      <value value="150"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="speed-fish">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-dolphins">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <subExperiment>
+      <enumeratedValueSet variable="initial-number-fish">
+        <value value="50"/>
+        <value value="100"/>
+        <value value="200"/>
+      </enumeratedValueSet>
+    </subExperiment>
+  </experiment>
+  <experiment name="2-dolphin-population-reproduction" repetitions="5" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
+    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>mean [fishes-eaten] of dolphins</metric>
+    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <enumeratedValueSet variable="fish-reproduction">
       <value value="true"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="speed-dolphin">
@@ -1215,6 +1025,161 @@ setup</setup>
         <value value="5"/>
         <value value="10"/>
         <value value="20"/>
+      </enumeratedValueSet>
+    </subExperiment>
+  </experiment>
+  <experiment name="3-fish-speed" repetitions="5" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
+    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>mean [fishes-eaten] of dolphins</metric>
+    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <enumeratedValueSet variable="fish-reproduction">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="speed-dolphin">
+      <value value="1.2"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dolphin-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-reproduction-rate">
+      <value value="150"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="speed-fish">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-dolphins">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-fish">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <subExperiment>
+      <enumeratedValueSet variable="speed-fish">
+        <value value="1"/>
+        <value value="1.2"/>
+        <value value="1.5"/>
+        <value value="1.7"/>
+        <value value="2"/>
+      </enumeratedValueSet>
+    </subExperiment>
+  </experiment>
+  <experiment name="3-dolphin-speed" repetitions="5" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
+    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>mean [fishes-eaten] of dolphins</metric>
+    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <enumeratedValueSet variable="fish-reproduction">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dolphin-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-reproduction-rate">
+      <value value="150"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="speed-fish">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-dolphins">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-fish">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <subExperiment>
+      <enumeratedValueSet variable="speed-dolphin">
+        <value value="1"/>
+        <value value="1.2"/>
+        <value value="1.5"/>
+        <value value="1.7"/>
+        <value value="2"/>
+      </enumeratedValueSet>
+    </subExperiment>
+  </experiment>
+  <experiment name="3-fish-speed-reproduction" repetitions="5" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
+    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>mean [fishes-eaten] of dolphins</metric>
+    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <enumeratedValueSet variable="fish-reproduction">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="speed-dolphin">
+      <value value="1.2"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dolphin-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-reproduction-rate">
+      <value value="150"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-dolphins">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-fish">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <subExperiment>
+      <enumeratedValueSet variable="speed-fish">
+        <value value="1"/>
+        <value value="1.2"/>
+        <value value="1.5"/>
+        <value value="1.7"/>
+        <value value="2"/>
+      </enumeratedValueSet>
+    </subExperiment>
+  </experiment>
+  <experiment name="3-dolphin-speed-reproduction" repetitions="5" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
+    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>mean [fishes-eaten] of dolphins</metric>
+    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <enumeratedValueSet variable="fish-reproduction">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dolphin-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-reproduction-rate">
+      <value value="150"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="speed-fish">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-dolphins">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-fish">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <subExperiment>
+      <enumeratedValueSet variable="speed-dolphin">
+        <value value="1"/>
+        <value value="1.2"/>
+        <value value="1.5"/>
+        <value value="1.7"/>
+        <value value="2"/>
       </enumeratedValueSet>
     </subExperiment>
   </experiment>

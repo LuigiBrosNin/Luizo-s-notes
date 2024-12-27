@@ -5,12 +5,15 @@ breed [ dolphins dolphin ]
 fishes-own [ lifetime fish-reproduce ]
 dolphins-own [ fishes-eaten ]
 
+globals [ max_turtles ]
+
 to setup
   clear-all
 
   ; blue background
   ask patches [ set pcolor blue ]
 
+  set max_turtles 2000
 
   create-fishes initial-number-fish ; create the fishes, then initialize their variables
   [
@@ -36,10 +39,12 @@ to setup
 end
 
 to go
-  ; stop the model if there are no turtles
-  if not any? turtles [ stop ]
-  ; stop the model if there are no dolphins
+  ; stop the model if there are no turtles or if there are too many turtles in the simulation
+  if not any? turtles or count turtles > max_turtles [ stop ]
+
   if not any? fishes [ user-message "The dolphins have inherited the earth" stop ]
+
+  if count turtles > max_turtles [ user-message "Turtles limit reached" stop ]
 
   ask fishes [ ; fish logic
 
@@ -1023,7 +1028,7 @@ repeat 75 [ go ]
       </enumeratedValueSet>
     </subExperiment>
   </experiment>
-  <experiment name="1-fish-speed" repetitions="5" runMetricsEveryStep="false">
+  <experiment name="3-fish-speed" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
     <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
@@ -1056,6 +1061,120 @@ repeat 75 [ go ]
     </enumeratedValueSet>
     <subExperiment>
       <enumeratedValueSet variable="speed-fish">
+        <value value="1"/>
+        <value value="1.2"/>
+        <value value="1.5"/>
+        <value value="1.7"/>
+        <value value="2"/>
+      </enumeratedValueSet>
+    </subExperiment>
+  </experiment>
+  <experiment name="4-dolphin-speed" repetitions="5" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
+    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>mean [fishes-eaten] of dolphins</metric>
+    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <enumeratedValueSet variable="fish-reproduction">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dolphin-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-reproduction-rate">
+      <value value="150"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="speed-fish">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-dolphins">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-fish">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <subExperiment>
+      <enumeratedValueSet variable="speed-dolphin">
+        <value value="1"/>
+        <value value="1.2"/>
+        <value value="1.5"/>
+        <value value="1.7"/>
+        <value value="2"/>
+      </enumeratedValueSet>
+    </subExperiment>
+  </experiment>
+  <experiment name="3-fish-speed-reproduction" repetitions="5" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
+    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>mean [fishes-eaten] of dolphins</metric>
+    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <enumeratedValueSet variable="fish-reproduction">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="speed-dolphin">
+      <value value="1.2"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dolphin-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-reproduction-rate">
+      <value value="150"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-dolphins">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-fish">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <subExperiment>
+      <enumeratedValueSet variable="speed-fish">
+        <value value="1"/>
+        <value value="1.2"/>
+        <value value="1.5"/>
+        <value value="1.7"/>
+        <value value="2"/>
+      </enumeratedValueSet>
+    </subExperiment>
+  </experiment>
+  <experiment name="3-dolphin-speed-reproduction" repetitions="5" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
+    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>mean [fishes-eaten] of dolphins</metric>
+    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <enumeratedValueSet variable="fish-reproduction">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dolphin-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-reproduction-rate">
+      <value value="150"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="speed-fish">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-dolphins">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-fish">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <subExperiment>
+      <enumeratedValueSet variable="speed-dolphin">
         <value value="1"/>
         <value value="1.2"/>
         <value value="1.5"/>
