@@ -210,7 +210,7 @@ speed-fish
 speed-fish
 1
 5
-1.0
+1.5
 0.1
 1
 NIL
@@ -301,7 +301,7 @@ SWITCH
 258
 fish-reproduction
 fish-reproduction
-0
+1
 1
 -1000
 
@@ -314,7 +314,7 @@ fish-vision-range
 fish-vision-range
 1
 25
-1.0
+3.0
 1
 1
 NIL
@@ -329,7 +329,7 @@ dolphin-vision-range
 dolphin-vision-range
 1
 25
-1.0
+3.0
 1
 1
 NIL
@@ -1069,7 +1069,7 @@ repeat 75 [ go ]
       </enumeratedValueSet>
     </subExperiment>
   </experiment>
-  <experiment name="3-dolphin-speed" repetitions="5" runMetricsEveryStep="false">
+  <experiment name="4-dolphin-speed" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
     <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
@@ -1145,7 +1145,7 @@ repeat 75 [ go ]
       </enumeratedValueSet>
     </subExperiment>
   </experiment>
-  <experiment name="3-dolphin-speed-reproduction" repetitions="5" runMetricsEveryStep="false">
+  <experiment name="4-dolphin-speed-reproduction" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
     <metric>sum [ fishes-eaten ] of turtles / ticks</metric>

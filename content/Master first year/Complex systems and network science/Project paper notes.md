@@ -45,6 +45,7 @@ The mean of fishes eaten skyrockets when there are fewer dolphins in a reproduct
 population of fishes existed greater than in other simulations with higher amounts of dolphins.
 
 ### 2.2.2 Speed
+Speed was estimated to be a deciding factor in fishes overpopulation, especially when the fish speed exceeded the dolphin's speed. This was not the case once again, as in reality the reported ticks were closer to a tipping point behaviour rather than any linear increase. The tipping point is obviously when the fish speed exceeds the dolphin speed, but it's interesting to see that they don't overpopulate despite the massive advantage they have over the dolphins, which is the case because of their fleeing behaviour: dolphins have the chance to eat the fishes when it's being chased by another dolphin or when the fish stumbles really close by swimming randomly
 
 
 - random results
