@@ -45,64 +45,11 @@ The mean of fishes eaten skyrockets when there are fewer dolphins in a reproduct
 population of fishes existed greater than in other simulations with higher amounts of dolphins.
 
 ### 2.2.2 Speed
-Speed was estimated to be a deciding factor in fishes overpopulation, especially when the fish speed exceeded the dolphin's speed. This was not the case once again, as in reality the reported ticks were closer to a tipping point behaviour rather than any linear increase. The tipping point is obviously when the fish speed exceeds the dolphin speed, but it's interesting to see that they don't overpopulate despite the massive advantage they have over the dolphins, which is the case because of their fleeing behaviour: dolphins have the chance to eat the fishes when it's being chased by another dolphin or when the fish stumbles really close by swimming randomly
+Speed was estimated to be a deciding factor in fishes overpopulation, especially when the fish speed exceeded the dolphin's speed. This was not the case once again, as in reality the reported ticks were closer to a tipping point behaviour rather than any linear increase. The tipping point is obviously when the fish speed exceeds the dolphin speed, but it's interesting to see that they don't overpopulate despite the massive advantage they have over the dolphins, which is the case because of their fleeing behaviour: dolphins have the chance to eat the fishes when it's being chased by another dolphin or when the fish stumbles really close by swimming randomly. We experience a rise in fish survivability when the difference is small, but then with higher amounts of speed, the ticks elapsed start to lower a bit as a result of the fish speed causing the fish to move closer to the dolphins before it sees the predator.
+
+Dolphin speed hugely impacted their hunting efficiency, ranging closer to a exponential increase as seen by the numbers reported. The fishes eaten each tick ranged from approximately 0.1 to around 0.5 with the peak of growth being around 1.5 and 1.7 speed. These results seem to be interconnected with the vision range, as the "tipping point" seems to be when the dolphins move at more than 50% of the fishes vision range, which makes perfect sense at a micro level.
 
 
-- random results
-	100 fish
-	10 dolphins
-	100 tick reproduction
-	delta vision range = 1
-	delta speed = 0.5
-	148 ticks
-	max lifetime 46, avg fish eaten 10.3
-	
-	decreased reproduction from 100 to 60
-	166 ticks
-	max lifetime 102, avg 12.6
-	
-	reproduction 30
-	fishes reproduce indefinitely
-	
-	reproduction 40
-	344 ticks, avg 30.9 eaten
-	
-	reproduction 36
-	multiple runs, some reproducing indefinitely, one ending on 425 ticks, 39.7 fishes eaten
-	
-	no reproduction
-	144 ticks, 121, 154, 169, 135
-	
-	200 Fishes, 20 dolphins
-	100, 134, 120, 110, 106
-	1 dolphin is heavier than 10 fishes
-	
-	8 dolphins
-	373, 212, 183,237,  148
-	more unstable ticks cuz dolphins need to find the fishes
-	
-	delta vision range 0
-	198 , 294, 234, 330, 171
-	slighty higher avg ticks, fishes rarely have the chance to run away
-	
-	delta vision range 1
-	delta speed 0
-	equilibrium 90 fishes, 1.24 avg eaten (when all dolphins all chase the same fish -> equilibrium)
-	
-	delta speed 0.1
-	614, 600, 683, 606, 536
-	low delta speed increases consistency? 
-
-	reproduction rate 80
-	dolphins 8 -> 26
-	fishes overpopulate up to 26 where they will go extinct (26 tipping point for 100 fishes, reproduction 80)
-	fishes eaten per tick 0.42, 0.58
-	
-	delta vision range 5
-	100 fishes
-	25 dolphins
-	increases consistency in ticks? (tends to constant ticks when range=board, fishes fleeing shouldn't cause flactuation, to test)
-	267, 275, 243, 223, 319
 
 - predictions + results
 	- initial number of fish -> higher = more ticks, log increase
