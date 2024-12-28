@@ -30,7 +30,5 @@ dWd-rand
 	- see above explaination; dWd guides the search trough fails.
 
 Overall I couldn't see the answer of Q2, neither in dWd-rand or under Q2. You are writing some guesses but the answer is indeed in the interpretation of the table values. **Within a time limit**, s1 has more fails than s2,  giving also more solutions than s2, resulting in a better solution quality. What does this indicate?
-- The bold text somehow guided me towards my current guess: Heavy tail behaviour
-	![[Pasted image 20241228181409.png]]
-	This fenomenon makes sense 
+- The dWd heuristic does a better job at exploring the problem
   
