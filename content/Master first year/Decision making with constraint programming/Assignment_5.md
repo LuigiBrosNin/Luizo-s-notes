@@ -24,10 +24,13 @@ Compare briefly the different search strategies going from the first to the last
 dWd-rand  
 
 - "Failures in dWd-rand guide the search" --> what does this mean? You are saying sth similar also under Q2  
-	- the dWd heuristic is based on weighted constraints: each time a constraint fails during propagation its weight increments (strat. the variable that gets chosen subsequently by the heuristic is $X_i$ with $\min \frac{ dom(X_{i})}{w(X_{i})}$. This means that before any propagation, the search is guided by the minimum domain size, but as the solver propagates, the constraints that cause failure get weighted and thus guide the search towards the heaviest constraints, aka the ones that fail more (fail-first principle). This is what i meant by "failures in dWd-rand guide the search"
+	- The dWd heuristic is based on weighted constraints: each time a constraint fails during propagation its weight increments (starting from 1). the variable that gets chosen subsequently by the heuristic is $X_i$ with $\min \frac{ dom(X_{i})}{w(X_{i})}$ (where $w(X_{i}) = \sum\limits_{c|X_{i}\in X(c)}w(c)$). This means that before any propagation, the search is guided by the minimum domain size, but as the solver propagates, the constraints that cause failure get weighted and thus guide the search towards the "heaviest" variables as a result, aka the ones that fail more (fail-first principle). This is what i meant by "failures in dWd-rand guide the search"
 
 - "so it's also thanks to the higher amount of fails that we're able to find more and better solutions." -> the reason of this connection is missing
+	- see above explaination; dWd guides the search trough fails.
 
-Overall I couldn't see the answer of Q2, neither in dWd-rand or under Q2. You are writing some guesses but the answer is indeed in the interpretation of the table values. **Within a time limit**, s1 has more fails than s2,  giving also more solutions than s2, resulting in a better solution quality. What does this indicate?   
+Overall I couldn't see the answer of Q2, neither in dWd-rand or under Q2. You are writing some guesses but the answer is indeed in the interpretation of the table values. **Within a time limit**, s1 has more fails than s2,  giving also more solutions than s2, resulting in a better solution quality. What does this indicate?
+- The bold text somehow guided me towards my current guess: Heavy tail behaviour
+	![[Pasted image 20241228181409.png]]
+	This fenomenon makes sense 
   
-We discuss this during the oral exam. I assign you 99 to remember this.

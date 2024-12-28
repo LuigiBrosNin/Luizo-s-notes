@@ -1,17 +1,16 @@
 # RCPSP
 
-| Default search | Objective value | Time                                            |
-| -------------- | --------------- | ----------------------------------------------- |
-| rcpspData1     | 90              | 360msec                                         |
-| rcpspData2     | 53              | 1s 53msec                                       |
-| rcpspData3     | 75              | 5s 304msec (last solution found before timeout) |
+| Default search | Objective value | Time       |
+| -------------- | --------------- | ---------- |
+| rcpspData1     | 90              | 360msec    |
+| rcpspData2     | 53              | 1s 53msec  |
+| rcpspData3     | 82              | 5s 567msec |
 
 | EST        | Objective value | Time        | Time initial solution |
 | ---------- | --------------- | ----------- | --------------------- |
 | rcpspData1 | 90              | 362msec     | 343msec               |
 | rcpspData2 | 54              | 45s 901msec | 361msec               |
 | rcpspData3 | 75              | 2s 506msec  | 362msec               |
-
 
 
 # JSP
@@ -28,6 +27,7 @@
 
 
 1. Is searching on EST a good strategy to find an initial solution?
+	TODO modifica!!!
 	The initial solutions of the EST methods are good approximations of the optimal solutions and they get compute very early in the search (in the msec range for all our tests). The initial solutions found are close enough to what the optimal solution is in the RCPSP exercise, while in the JSP exercise the initial solutions are way more far off the optimal solution found by the default search, which depending on the situation, might not be a good enough solution.
 	EST appears to be a consistent strategy time-wise, where it could be considered a good strategy for a initial solution if the context of the problem admits initial solutions that may be relatively far from optimal.
 	
@@ -36,3 +36,5 @@
 	To find the optimal solution, the solver needs to explore different task orderings, which requires many failures out of the EST strategy before it changes its order.
 	It is not an ideal strategy for finding the **optimal solution** due to its tendency to prioritize early task start times and deviating from it only after many attempts and a lot of backtracking. The greedy nature of EST is not optimized to find optimal solutions, and the main difficulty it has is regarding backtracking: $S_{i}\ne 0$ ($S_{i}$ being start time of an activity $a_{i}$) is weak given the size of $S_{n}$.
 	The SetTimes search strategy mitigates this issue with the EST greedy approach by postponing tasks and incentivizing different task ordering, creating effective branching choices.
+	
+	
