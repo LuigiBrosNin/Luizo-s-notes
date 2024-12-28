@@ -30,5 +30,5 @@ dWd-rand
 	- see above explaination; dWd guides the search trough fails.
 
 Overall I couldn't see the answer of Q2, neither in dWd-rand or under Q2. You are writing some guesses but the answer is indeed in the interpretation of the table values. **Within a time limit**, s1 has more fails than s2,  giving also more solutions than s2, resulting in a better solution quality. What does this indicate?
-- The dWd heuristic does a better job at exploring the problem
+- The fact that dWd-rand finds more solutions despite the higher failure count indicates that it is more explorative in the search space. It is testing more configurations thanks to the weighted heuristic and randomness, even though some of them lead to failures. the default search may also experience more heavy tail behaviour than dWd-rand, which also explains the higher amount of solutions.
   
