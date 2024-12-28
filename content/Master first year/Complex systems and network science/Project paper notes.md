@@ -53,35 +53,12 @@ Dolphin speed hugely impacted their hunting efficiency, ranging closer to a expo
 Vision had much more impact than predicted. a high vision range on the fishes causes to consistently end up in overpopulation, as they avoid being found in the first place by dolphins. Interestingly, the tipping point doesn't seem to be the equality of vision ranges, but rather a strict higher value than the dolphin vision range. This is likely due to the same value of range resulting in dolphins chasing fishes at the same tick the fishes would start to flee, and that gives the dolphins chances to catch the fishes as they normally would in other scenarios.
 This is the first parameter to allow the overpopulation of fishes, which is expected given the preventive nature of the function, as opposed to the last resort tactic of fleeing, that only boosts survivability without ever thriving in the environment.
 
-### 2.2.4 Reproduction
+### 2.2.4 Reproduction rate
+A strategy commonly seen naturally in our world, is to increase survivability trough numerous children and copulating often (eg. Rabbits). Unsurprisingly, when presented with an low reproduction cool-down, fishes were quickly to thrive in the environment. A tipping point in this scenario is around a reproduction rate of 68, which produces mixed results between dolphins eating everything and fishes thriving trough numbers.
+The fishes eaten statistic also shows us that in highly dense fish population environments food is way easier to stumble upon, as the chances of encountering a fish among many increases.
+Equilibrium states are difficult to achieve in a simulation 
 
+Plot of population of fishes in two runs set with reproduction rate 68
+![[Pasted image 20241228021310.png]]
+![[Pasted image 20241228021346.png]]
 
-
-- predictions + results
-	- initial number of fish -> higher = more ticks, log increase
-
-		Linear increase, makes sense as the dolphins eat linearly
-	- initial number of dolphins -> higher -> less ticks, log decrease
-		1 dolphin -> 1089
-		25 dolphins -> 89
-		125 -> 15
-		250 -> 10 ticks
-		rational type
-		Board size has an impact on this
-	- delta speed (dolphin > fish) -> 0 tends to infinite ticks, the higher the more fishes eaten per tick, rational type
-		-0.1 -> 3k ticks
-		0 -> 1100 - 1400 ticks, 0.08~ eaten
-		0.1 -> 422 ticks, 0.2~ eaten per tick
-		0.5 -> 261, 0.35~ eaten per tick
-		1 -> 148, 0.60~ eaten per tick
-		2 -> 100~, 0.75~ eaten per tick, inconsistent (0.5 - 1.2)
-		5 -> 90~, 0.9~ eaten per tick
-		rational positive type
-		doesn't tend to infinite when 0 nor negative because multiple dolphins can create a local world state where a fish can be eaten
-	- delta vision range -> negative tends to infinite ticks, higher more fishes eaten per tick?
-		-1 -> 6.5k
-		0 -> 300-400 ticks
-		12 -> 150~ ticks
-		25 -> 40-60 ticks
-		doesn't tend to infinite when 0 nor negative because multiple dolphins can create a local world state where a fish can be eaten
-	- fish reproduction rate
