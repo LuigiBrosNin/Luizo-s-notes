@@ -1268,6 +1268,7 @@ repeat 75 [ go ]
     <metric>sum [ fishes-eaten ] of dolphins / ticks</metric>
     <metric>sum [ fishes-eaten ] of dolphins</metric>
     <metric>mean [fishes-eaten] of dolphins</metric>
+    <metric>count fishes</metric>
     <runMetricsCondition>(count fishes) = 0 or (count fishes + count dolphins) &gt;= max_turtles</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
       <value value="true"/>
@@ -1305,6 +1306,7 @@ repeat 75 [ go ]
     <metric>sum [ fishes-eaten ] of dolphins / ticks</metric>
     <metric>sum [ fishes-eaten ] of dolphins</metric>
     <metric>mean [fishes-eaten] of dolphins</metric>
+    <metric>count fishes</metric>
     <runMetricsCondition>(count fishes) = 0 or (count fishes + count dolphins) &gt;= max_turtles</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
       <value value="false"/>
@@ -1330,6 +1332,45 @@ repeat 75 [ go ]
         <value value="3"/>
         <value value="5"/>
         <value value="10"/>
+      </enumeratedValueSet>
+    </subExperiment>
+  </experiment>
+  <experiment name="7-fish-reproduction" repetitions="5" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>sum [ fishes-eaten ] of dolphins / ticks</metric>
+    <metric>sum [ fishes-eaten ] of dolphins</metric>
+    <metric>mean [fishes-eaten] of dolphins</metric>
+    <metric>count fishes</metric>
+    <runMetricsCondition>(count fishes) = 0 or (count fishes + count dolphins) &gt;= max_turtles</runMetricsCondition>
+    <enumeratedValueSet variable="fish-reproduction">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="speed-dolphin">
+      <value value="1.2"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dolphin-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fish-vision-range">
+      <value value="3"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="speed-fish">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-dolphins">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-number-fish">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <subExperiment>
+      <enumeratedValueSet variable="fish-reproduction-rate">
+        <value value="25"/>
+        <value value="50"/>
+        <value value="100"/>
+        <value value="150"/>
+        <value value="300"/>
       </enumeratedValueSet>
     </subExperiment>
   </experiment>

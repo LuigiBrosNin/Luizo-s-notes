@@ -50,7 +50,11 @@ Speed was estimated to be a deciding factor in fishes overpopulation, especially
 Dolphin speed hugely impacted their hunting efficiency, ranging closer to a exponential increase as seen by the numbers reported. The fishes eaten each tick ranged from approximately 0.1 to around 0.5 with the peak of growth being around 1.5 and 1.7 speed. These results seem to be interconnected with the vision range, as the "tipping point" seems to be when the dolphins move at more than 50% of the fishes vision range, which makes perfect sense at a micro level.
 
 ### 2.2.3 Vision ranges
-Vision had much more impact than predicted
+Vision had much more impact than predicted. a high vision range on the fishes causes to consistently end up in overpopulation, as they avoid being found in the first place by dolphins. Interestingly, the tipping point doesn't seem to be the equality of vision ranges, but rather a strict higher value than the dolphin vision range. This is likely due to the same value of range resulting in dolphins chasing fishes at the same tick the fishes would start to flee, and that gives the dolphins chances to catch the fishes as they normally would in other scenarios.
+This is the first parameter to allow the overpopulation of fishes, which is expected given the preventive nature of the function, as opposed to the last resort tactic of fleeing, that only boosts survivability without ever thriving in the environment.
+
+### 2.2.4 Reproduction
+
 
 
 - predictions + results
