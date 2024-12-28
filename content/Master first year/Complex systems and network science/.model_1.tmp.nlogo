@@ -40,8 +40,6 @@ end
 
 to go
   ; stop the model if there are no turtles or if there are too many turtles in the simulation
-
-
   if not any? fishes [ user-message "The dolphins have inherited the earth" stop ]
 
   if count turtles > max_turtles [ user-message "Turtles limit reached" stop ]
@@ -887,10 +885,11 @@ repeat 75 [ go ]
   <experiment name="1-fish-population" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
-    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>sum [ fishes-eaten ] of dolphins / ticks</metric>
+    <metric>sum [ fishes-eaten ] of dolphins</metric>
     <metric>mean [fishes-eaten] of dolphins</metric>
-    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <metric>count fishes</metric>
+    <runMetricsCondition>(count fishes) = 0 or (count fishes + count dolphins) &gt;= max_turtles</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
       <value value="false"/>
     </enumeratedValueSet>
@@ -923,10 +922,11 @@ repeat 75 [ go ]
   <experiment name="2-dolphin-population" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
-    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>sum [ fishes-eaten ] of dolphins / ticks</metric>
+    <metric>sum [ fishes-eaten ] of dolphins</metric>
     <metric>mean [fishes-eaten] of dolphins</metric>
-    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <metric>count fishes</metric>
+    <runMetricsCondition>(count fishes) = 0 or (count fishes + count dolphins) &gt;= max_turtles</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
       <value value="false"/>
     </enumeratedValueSet>
@@ -959,10 +959,11 @@ repeat 75 [ go ]
   <experiment name="1-fish-population-reproduction" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
-    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>sum [ fishes-eaten ] of dolphins / ticks</metric>
+    <metric>sum [ fishes-eaten ] of dolphins</metric>
     <metric>mean [fishes-eaten] of dolphins</metric>
-    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <metric>count fishes</metric>
+    <runMetricsCondition>(count fishes) = 0 or (count fishes + count dolphins) &gt;= max_turtles</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
       <value value="true"/>
     </enumeratedValueSet>
@@ -995,10 +996,11 @@ repeat 75 [ go ]
   <experiment name="2-dolphin-population-reproduction" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
-    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>sum [ fishes-eaten ] of dolphins / ticks</metric>
+    <metric>sum [ fishes-eaten ] of dolphins</metric>
     <metric>mean [fishes-eaten] of dolphins</metric>
-    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <metric>count fishes</metric>
+    <runMetricsCondition>(count fishes) = 0 or (count fishes + count dolphins) &gt;= max_turtles</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
       <value value="true"/>
     </enumeratedValueSet>
@@ -1031,10 +1033,11 @@ repeat 75 [ go ]
   <experiment name="3-fish-speed" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
-    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>sum [ fishes-eaten ] of dolphins / ticks</metric>
+    <metric>sum [ fishes-eaten ] of dolphins</metric>
     <metric>mean [fishes-eaten] of dolphins</metric>
-    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <metric>count fishes</metric>
+    <runMetricsCondition>(count fishes) = 0 or (count fishes + count dolphins) &gt;= max_turtles</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
       <value value="false"/>
     </enumeratedValueSet>
@@ -1072,10 +1075,11 @@ repeat 75 [ go ]
   <experiment name="4-dolphin-speed" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
-    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>sum [ fishes-eaten ] of dolphins / ticks</metric>
+    <metric>sum [ fishes-eaten ] of dolphins</metric>
     <metric>mean [fishes-eaten] of dolphins</metric>
-    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <metric>count fishes</metric>
+    <runMetricsCondition>(count fishes) = 0 or (count fishes + count dolphins) &gt;= max_turtles</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
       <value value="false"/>
     </enumeratedValueSet>
@@ -1110,10 +1114,11 @@ repeat 75 [ go ]
   <experiment name="3-fish-speed-reproduction" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
-    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>sum [ fishes-eaten ] of dolphins / ticks</metric>
+    <metric>sum [ fishes-eaten ] of dolphins</metric>
     <metric>mean [fishes-eaten] of dolphins</metric>
-    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <metric>count fishes</metric>
+    <runMetricsCondition>(count fishes) = 0 or (count fishes + count dolphins) &gt;= max_turtles</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
       <value value="true"/>
     </enumeratedValueSet>
@@ -1148,10 +1153,11 @@ repeat 75 [ go ]
   <experiment name="4-dolphin-speed-reproduction" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
-    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>sum [ fishes-eaten ] of dolphins / ticks</metric>
+    <metric>sum [ fishes-eaten ] of dolphins</metric>
     <metric>mean [fishes-eaten] of dolphins</metric>
-    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <metric>count fishes</metric>
+    <runMetricsCondition>(count fishes) = 0 or (count fishes + count dolphins) &gt;= max_turtles</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
       <value value="true"/>
     </enumeratedValueSet>
@@ -1186,10 +1192,11 @@ repeat 75 [ go ]
   <experiment name="5-fish-vision" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
-    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>sum [ fishes-eaten ] of dolphins / ticks</metric>
+    <metric>sum [ fishes-eaten ] of dolphins</metric>
     <metric>mean [fishes-eaten] of dolphins</metric>
-    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <metric>count fishes</metric>
+    <runMetricsCondition>(count fishes) = 0 or (count fishes + count dolphins) &gt;= max_turtles</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
       <value value="false"/>
     </enumeratedValueSet>
@@ -1223,10 +1230,11 @@ repeat 75 [ go ]
   <experiment name="6-dolphin-vision" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
-    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>sum [ fishes-eaten ] of dolphins / ticks</metric>
+    <metric>sum [ fishes-eaten ] of dolphins</metric>
     <metric>mean [fishes-eaten] of dolphins</metric>
-    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <metric>count fishes</metric>
+    <runMetricsCondition>(count fishes) = 0 or (count fishes + count dolphins) &gt;= max_turtles</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
       <value value="false"/>
     </enumeratedValueSet>
@@ -1257,10 +1265,10 @@ repeat 75 [ go ]
   <experiment name="5-fish-vision-reproduction" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
-    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>sum [ fishes-eaten ] of dolphins / ticks</metric>
+    <metric>sum [ fishes-eaten ] of dolphins</metric>
     <metric>mean [fishes-eaten] of dolphins</metric>
-    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <runMetricsCondition>(count fishes) = 0 or (count fishes + count dolphins) &gt;= max_turtles</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
       <value value="true"/>
     </enumeratedValueSet>
@@ -1294,10 +1302,10 @@ repeat 75 [ go ]
   <experiment name="6-dolphin-vision-reproduction" repetitions="5" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <metric>sum [ fishes-eaten ] of turtles / ticks</metric>
-    <metric>sum [ fishes-eaten ] of turtles</metric>
+    <metric>sum [ fishes-eaten ] of dolphins / ticks</metric>
+    <metric>sum [ fishes-eaten ] of dolphins</metric>
     <metric>mean [fishes-eaten] of dolphins</metric>
-    <runMetricsCondition>(count fishes) = 0</runMetricsCondition>
+    <runMetricsCondition>(count fishes) = 0 or (count fishes + count dolphins) &gt;= max_turtles</runMetricsCondition>
     <enumeratedValueSet variable="fish-reproduction">
       <value value="false"/>
     </enumeratedValueSet>
