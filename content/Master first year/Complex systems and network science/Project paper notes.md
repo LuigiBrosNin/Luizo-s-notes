@@ -56,9 +56,15 @@ This is the first parameter to allow the overpopulation of fishes, which is expe
 ### 2.2.4 Reproduction rate
 A strategy commonly seen naturally in our world, is to increase survivability trough numerous children and copulating often (eg. Rabbits). Unsurprisingly, when presented with an low reproduction cool-down, fishes were quickly to thrive in the environment. A tipping point in this scenario is around a reproduction rate of 68, which produces mixed results between dolphins eating everything and fishes thriving trough numbers.
 The fishes eaten statistic also shows us that in highly dense fish population environments food is way easier to stumble upon, as the chances of encountering a fish among many increases.
-Equilibrium states are difficult to achieve in a simulation 
+Equilibrium states are difficult to achieve with a reproduction system such as this one we have implemented: fishes should reproduce around when half the population gets eaten, but being eaten does not happen on a flat rate. Instead, each reproduction interval, the amount of fishes eaten varies depending on the population of fishes left and random movements of the turtles. Achieving a true equilibrium where dolphins eat fishes and fishes never go extinct is rendered impossible as a slight inconsistency in an interval can snowball into fishes overpopulation or extinction.
 
 Plot of population of fishes in two runs set with reproduction rate 68
 ![[Pasted image 20241228021310.png]]
 ![[Pasted image 20241228021346.png]]
 
+# 3 Schooling of fish model
+
+
+
+
+#
