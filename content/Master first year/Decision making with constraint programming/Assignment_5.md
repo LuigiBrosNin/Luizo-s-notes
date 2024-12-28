@@ -21,3 +21,13 @@ Compare briefly the different search strategies going from the first to the last
 	  Another important note about the higher failures is how dWd-rand fails more towards the beginning of the search, sharpening the search as time goes on and ultimately finding more solutions than the default search strategy thanks to the guided heuristic.
 
 
+dWd-rand  
+
+- "Failures in dWd-rand guide the search" --> what does this mean? You are saying sth similar also under Q2  
+	- the dWd heuristic is based on weighted constraints: each time a constraint fails during propagation its weight increments (strat. the variable that gets chosen subsequently by the heuristic is $X_i$ with $\min \frac{ dom(X_{i})}{w(X_{i})}$. This means that before any propagation, the search is guided by the minimum domain size, but as the solver propagates, the constraints that cause failure get weighted and thus guide the search towards the heaviest constraints, aka the ones that fail more (fail-first principle). This is what i meant by "failures in dWd-rand guide the search"
+
+- "so it's also thanks to the higher amount of fails that we're able to find more and better solutions." -> the reason of this connection is missing
+
+Overall I couldn't see the answer of Q2, neither in dWd-rand or under Q2. You are writing some guesses but the answer is indeed in the interpretation of the table values. **Within a time limit**, s1 has more fails than s2,  giving also more solutions than s2, resulting in a better solution quality. What does this indicate?   
+  
+We discuss this during the oral exam. I assign you 99 to remember this.

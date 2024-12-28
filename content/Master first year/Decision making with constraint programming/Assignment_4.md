@@ -8,9 +8,9 @@
 
 | EST        | Objective value | Time        | Time initial solution |
 | ---------- | --------------- | ----------- | --------------------- |
-| rcpspData1 | 60              | 343msec     | 343msec               |
-| rcpspData2 | 49              | 39s 858msec | 313msec               |
-| rcpspData3 | 70              | 11s 243msec | 358msec               |
+| rcpspData1 | 90              | 362msec     | 343msec               |
+| rcpspData2 | 54              | 45s 901msec | 361msec               |
+| rcpspData3 | 75              | 2s 506msec  | 362msec               |
 
 
 
