@@ -25,6 +25,11 @@
 | jobshop1 | 669             | -    | 969msec               |
 | jobshop2 | 1086            | -    | 120msec               |
 
+| EST      | Objective value | Time | Time initial solution |
+| -------- | --------------- | ---- | --------------------- |
+| jobshop1 | 732             | -    | 495msec               |
+| jobshop2 | 1086            | -    | 120msec               |
+
 
 1. Is searching on EST a good strategy to find an initial solution?
 	TODO modifica!!!
