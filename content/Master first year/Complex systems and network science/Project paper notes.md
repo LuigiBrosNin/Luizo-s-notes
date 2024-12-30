@@ -74,7 +74,15 @@ The dolphin agents have no changes in their rules.
 Newly parameters include the fish collision range, a threshold for how far fishes should keep each other from in the schooling; a fish cohesion range, that defines how far a fish should look into to find the direction to move to other fishes, the cohesion and alignment weight, that determines the weight they have respectively on the fish movement, and the fishes max turn, that caps their maximum turning speed during each tick, only valid when not fleeing.
 
 ## 3.2 Methodology and results
+Research was conducted to briefly compare the survivability of fishes compared to our previous model, and see if the expected schooling behaviour has an impact on the fish agents' survivability. Then, different variation of the parameters have been tested to verify how each affects the outcomes of the simulation.
+Will the state of equilibrium and tipping point change compared to the previous models? What will the new parameters change in the simulation?
+Will there be substantial differences in the previous parameters' importance with the new schooling behaviour?
+
+### 3.2.1 Previous parameters comparison
 
 
+
+![[Pasted image 20241230164643.png]]
+plot of equilibrium state on fish speed 1.5 vs dolphin speed 1.3
 
 #
