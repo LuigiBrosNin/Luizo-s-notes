@@ -63,7 +63,17 @@ Plot of population of fishes in two runs set with reproduction rate 68
 ![[Pasted image 20241228021346.png]]
 
 # 3 Schooling of fish model
+The second model studied implements the fish schooling behaviour. The chosen behaviour was based of the Boids behaviurs, but with some minor changes to ensure fleeing in our current model. In addition to all previous set of rules, we have additional rules for the fish agents:
+- Separation: The fish moves away from other fishes if a given threshold distance between them is reached
+- Cohesion: Move towards other fishes
+- Alignment: Maintain alignment to other fishes
+- Roaming: The fish no longer moves in a random direction. Instead, it will continue moving to its current direction.
+The dolphin agents have no changes in their rules.
 
+## 3.1 Significant design decisions and extensions
+Newly parameters include the fish collision range, a threshold for how far fishes should keep each other from in the schooling; a fish cohesion range, that defines how far a fish should look into to find the direction to move to other fishes, the cohesion and alignment weight, that determines the weight they have respectively on the fish movement, and the fishes max turn, that caps their maximum turning speed during each tick, only valid when not fleeing.
+
+## 3.2 Methodology and results
 
 
 
