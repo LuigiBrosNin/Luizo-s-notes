@@ -51,7 +51,7 @@ Dolphin speed hugely impacted their hunting efficiency, ranging closer to a expo
 
 ### 2.2.3 Vision ranges
 Vision had much more impact than predicted. a high vision range on the fishes causes to consistently end up in overpopulation, as they avoid being found in the first place by dolphins. Interestingly, the tipping point doesn't seem to be the equality of vision ranges, but rather a strict higher value than the dolphin vision range. This is likely due to the same value of range resulting in dolphins chasing fishes at the same tick the fishes would start to flee, and that gives the dolphins chances to catch the fishes as they normally would in other scenarios.
-This is the first parameter to allow the overpopulation of fishes, which is expected given the preventive nature of the function, as opposed to the last resort tactic of fleeing, that only boosts survivability without ever thriving in the environment.
+This is the first parameter to allow the overpopulation of fishes consistently, which is expected given the preventive nature of the function, as opposed to the last resort tactic of fleeing, that only boosts survivability inconsistently in the environment (higher speeds decrease survivability back again).
 
 ### 2.2.4 Reproduction rate
 A strategy commonly seen naturally in our world, is to increase survivability trough numerous children and copulating often (eg. Rabbits). Unsurprisingly, when presented with an low reproduction cool-down, fishes were quickly to thrive in the environment. A tipping point in this scenario is around a reproduction rate of 68, which produces mixed results between dolphins eating everything and fishes thriving trough numbers.
@@ -98,5 +98,9 @@ This is an interesting, consistent equilibrium state that maintains the fish pop
 ![[Pasted image 20241230164643.png]]
 plot of equilibrium state on fish speed 1.5 vs dolphin speed 1.3
 
+No changes to report that affect previous behaviours in the 4 experiments regarding vision ranges.
+The final reproductive experiment was analyzed also in terms of statistics with the other model, and we can definitely see that despite the simulation ending in the same tick as their counterpart when fishes overpopulate, the fishes eaten are in average higher in the second model. Schooling makes it easier for dolphins to hunt fishes, due to how by finding any given fish agent, the dolphin is able to pursue the entire schooling right after instead of having to hunt for another individual fish agent.
+
+### 3.2.2 New parameters observations
 
 #
