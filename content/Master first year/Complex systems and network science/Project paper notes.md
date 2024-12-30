@@ -77,8 +77,20 @@ Newly parameters include the fish collision range, a threshold for how far fishe
 Research was conducted to briefly compare the survivability of fishes compared to our previous model, and see if the expected schooling behaviour has an impact on the fish agents' survivability. Then, different variation of the parameters have been tested to verify how each affects the outcomes of the simulation.
 Will the state of equilibrium and tipping point change compared to the previous models? What will the new parameters change in the simulation?
 Will there be substantial differences in the previous parameters' importance with the new schooling behaviour?
-
+Common parameters:
+Vision range for Fishes and Dolphins: 3 cells
+Dolphin speed: 1.2 cells
+Fish speed: 1 cell
+Fish reproduction rate: 150 ticks
+Dolphin population: 10 turtles
+Fish population: 100 turtles
+Fish collision range: 1
+Fish cohesion range: 3
+Cohesion weight: 0.3
+Alignment weight: 0.3
+Max turn: 20
 ### 3.2.1 Previous parameters comparison
+No difference was noticed in the population experiments' results, the numbers kept their trends and behaviours across all 4 experiments.
 
 
 
