@@ -91,10 +91,12 @@ Alignment weight: 0.3
 Max turn: 20
 ### 3.2.1 Previous parameters comparison
 No difference was noticed in the population experiments' results, the numbers kept their trends and behaviours across all 4 experiments.
-The speed of fishes without reproduction and the speed of dolphins in both cases didn't report changes in the results
-
+The speed of fishes without reproduction and the speed of dolphins in both cases didn't report changes that affect the previous chapter's observations, However, a state of equilibrium was reached within the experiments retaining the speed of fishes in a reproductive environment.
+When the speed of fishes exceeded the speed of dolphin, with 1.5 total speed, we saw a consistent state of equilibrium in all 5 runs, reported in the plot in figure 3.
+This is an interesting, consistent equilibrium state that maintains the fish population between roughly 70 and 5. This proves that contradictory to the expected schooling behaviour results, schooling decreases the effectiveness of survivability, as in the previous model experiment fishes consistently thrived into the environment with the same parameters.
 
 ![[Pasted image 20241230164643.png]]
 plot of equilibrium state on fish speed 1.5 vs dolphin speed 1.3
+
 
 #
