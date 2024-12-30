@@ -91,7 +91,7 @@ Alignment weight: 0.3
 Max turn: 20
 ### 3.2.1 Previous parameters comparison
 No difference was noticed in the population experiments' results, the numbers kept their trends and behaviours across all 4 experiments.
-
+The speed of fishes without reproduction and the speed of dolphins in both cases didn't report changes in the results
 
 
 ![[Pasted image 20241230164643.png]]
