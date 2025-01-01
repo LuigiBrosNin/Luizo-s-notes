@@ -103,7 +103,7 @@ The final reproductive experiment was analyzed also in terms of statistics with 
 
 ### 3.2.2 New parameters observations
 The collision range of our fishes didn't seem to affect the simulation at all, as the only tipping point worth mentioning is one we can easily expect: When the collision range is higher than the fish cohesion range, no schooling behaviour occurs, as the fishes never end up being close enough to each other to permit the trait to manifest in the environment.
-Cohesion ranges also didn't affect much the simulation, going against the prediction that it would've worsened the survivability of fishes, as the agents would be even more concentrated into bigger schoolings, making hunting even easier for the dolphin agents. This wasn't the case, as the hunting statistics didn't
+Cohesion ranges also didn't affect much the simulation, going against the prediction that it would've worsened the survivability of fishes, as the agents would be even more concentrated into bigger schoolings, making hunting even easier for the dolphin agents. This wasn't the case, as the hunting statistics didn't change much across runs.
 
 
 #
