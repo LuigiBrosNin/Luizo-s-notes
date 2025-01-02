@@ -93,7 +93,7 @@ Max turn: 20
 ### 3.2.1 Previous parameters comparison
 No difference was noticed in the population experiments' results, the numbers kept their trends and behaviours across all 4 experiments.
 The speed of fishes without reproduction and the speed of dolphins in both cases didn't report changes that affect the previous chapter's observations, However, a state of equilibrium was reached within the experiments retaining the speed of fishes in a reproductive environment.
-When the speed of fishes exceeded the speed of dolphin, with 1.5 total speed, we saw a consistent state of equilibrium in all 5 runs, reported in the plot in figure 3.
+When the speed of fishes exceeded the speed of dolphin in the fish speed with reproduction experiments, with 1.5 total speed, we saw a consistent state of equilibrium in all 5 runs, reported in the plot in figure 3.
 This is an interesting, consistent equilibrium state that maintains the fish population between roughly 70 and 5. This proves that contradictory to the expected schooling behaviour results, schooling decreases the effectiveness of survivability, as in the previous model experiment fishes consistently thrived into the environment with the same parameters.
 
 ![[Pasted image 20241230164643.png]]
@@ -141,5 +141,11 @@ Dolphin communication range: 8 cells
 
 ### 4.2.1 Hunting effectiveness
 The average length of simulations saw a decrease from the previous model, and the fish eaten per tick statistic got a bit higher across experiments, signaling that there was an improvement in the dolphin's hunting strategy. The dolphin population table shows us that, as expected, the number of dolphins greatly increases the effectiveness of the strategy due to the higher amount of communicating nodes in the system, what was more unexpected was the level of impact of the dolphin population size, which made smaller sizes more consistent in hunting and bigger sizes substantially better at hunting, with lower ticks and more consistent fishes consumed each tick in average.
-Fish speed experiments confirm the more stable and consistent measures that the  communication system now clearly causes. every measurement more closely fits each other run in the same category, largely because the ticks dolphin agents spent roaming are less common, and the time to eat each fish is more strictly .
+Fish speed experiments confirm the more stable and consistent measures that the  communication system now clearly causes. every measurement more closely fits each other run in the same category, largely because the ticks dolphin agents spent roaming are less common, and the time to eat each fish is more strictly the same.
+
+### 4.2.2 Equilibrium
+The state of equilibrium of the fish speed with reproduction model is completely changed due to the hunting strategy, and equilibrium is never reached because of the dolphins' ability to communicate. The change is also quite noticeable too, as the biggest change we have introducing the hunting model is a reduction in ticks where dolphins are roaming, thus making them more consistent hunters. This effect was not completely expected but it falls in line with the results in the vision range experiments of the previous model, where prevention of danger exceeded the results of a better fleeing ability. An alternative equilibria in the model has not been found trough the experiments conducted, although with the amount of data and knowledge of the parameters' effectiveness in changing the environment in favour of fishes and dolphins, it will be possible if not easier to find a state of equilibrium now that the eating times of dolphins are more consistent across runs.
+### 4.3.3 Communication range
+The results of the experiments of communication range were harder to understand, but it seems that the results 
+
 #
