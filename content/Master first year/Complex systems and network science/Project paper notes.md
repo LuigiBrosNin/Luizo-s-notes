@@ -112,7 +112,30 @@ The worsening of the fishes survivability also led to a state of equilibrium in 
 
 
 # 4 Hunting strategy model
-The third and final model studied implements a peer to peer communication system between our dolphin agents. This system aims to improve the hunting strategy of dolphins by communicating with each other the position of fishes based on 
+The third and final model studied implements a peer to peer communication system between our dolphin agents. This system aims to improve the hunting strategy of dolphins by communicating with each other the position of fishes in nearby dolphin's vision range.
+The schooling of fishes behaviour is present in the experiments conducted.
+The dolphin policies have been expanded to include:
+- Hunting: When any fishes are within vision range, chase the nearest fish and communicate the position of nearby fishes to close by dolphins.
+- Follow instructions: if there are no fishes to chase, look for dolphins in communication range and find the closest fish to the current agent (myself), then move towards it as in hunting.
+- Roaming: if there's no fishes nearby and there were no fishes found trough communication, move in a random constant direction
+The fish agents had no changes in their policies compared to the previous model.
 
-
+## 4.1 Significant design decisions and extensions
+The only new parameter of this model is the dolphin communication range, which measures how far dolphins need to be at most from each other to be able to communicate.
+## 4.2 Methodology and results
+Research was conducted to compare the hunting effectiveness to the previous models, and study how and if the hunting strategy performs according to the aligned communication norm, how big the impact of the communication range is and if there are interesting differences in the found tipping points.
+Care was put to study when the hunting strategy had the most impact and at what circumstances.
+Common parameters:
+Vision range for Fishes and Dolphins: 3 cells
+Dolphin speed: 1.2 cells
+Fish speed: 1 cell
+Fish reproduction rate: 150 ticks
+Dolphin population: 10 turtles
+Fish population: 100 turtles
+Fish collision range: 1
+Fish cohesion range: 3
+Cohesion weight: 0.3
+Alignment weight: 0.3
+Max turn: 20
+Dolphin communication range: 8 cells
 #
