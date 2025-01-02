@@ -146,6 +146,6 @@ Fish speed experiments confirm the more stable and consistent measures that the 
 ### 4.2.2 Equilibrium
 The state of equilibrium of the fish speed with reproduction model is completely changed due to the hunting strategy, and equilibrium is never reached because of the dolphins' ability to communicate. The change is also quite noticeable too, as the biggest change we have introducing the hunting model is a reduction in ticks where dolphins are roaming, thus making them more consistent hunters. This effect was not completely expected but it falls in line with the results in the vision range experiments of the previous model, where prevention of danger exceeded the results of a better fleeing ability. An alternative equilibria in the model has not been found trough the experiments conducted, although with the amount of data and knowledge of the parameters' effectiveness in changing the environment in favour of fishes and dolphins, it will be possible if not easier to find a state of equilibrium now that the eating times of dolphins are more consistent across runs.
 ### 4.3.3 Communication range
-The results of the experiments of communication range were harder to understand, but it seems that the results 
+The results of the experiments of communication range were harder to understand, but it seems that the results follow a bell curve distribution that differs slightly from the previous model results regarding fishes eaten per tick.
 
 #
