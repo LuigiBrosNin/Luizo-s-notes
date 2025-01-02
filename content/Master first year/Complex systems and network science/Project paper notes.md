@@ -124,7 +124,7 @@ The fish agents had no changes in their policies compared to the previous model.
 The only new parameter of this model is the dolphin communication range, which measures how far dolphins need to be at most from each other to be able to communicate.
 ## 4.2 Methodology and results
 Research was conducted to compare the hunting effectiveness to the previous models, and study how and if the hunting strategy performs according to the aligned communication norm, how big the impact of the communication range is and if there are interesting differences in the found tipping points.
-Care was put to study when the hunting strategy had the most impact and at what circumstances.
+Care was put to study when the hunting strategy had the most impact and under which circumstances.
 Common parameters:
 Vision range for Fishes and Dolphins: 3 cells
 Dolphin speed: 1.2 cells
@@ -138,4 +138,9 @@ Cohesion weight: 0.3
 Alignment weight: 0.3
 Max turn: 20
 Dolphin communication range: 8 cells
+
+### 4.2.1 Hunting effectiveness
+The average length of simulations saw a decrease from the previous model, and the fish eaten per tick statistic got a bit higher across experiments, signaling that there was an improvement in the dolphin's hunting strategy. The dol
+
+
 #
