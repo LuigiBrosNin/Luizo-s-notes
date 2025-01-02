@@ -5,7 +5,7 @@
 5. tipping points
 6. equilibrium states
 
-# 2 baseline model
+# 2 Baseline model
 The first proposed model implements all basic behaviours present in subsequent models, with slight differences. This environment generates a set of fishes and dolphin around a 2D space where they're free to move.
 The fish agents have a set of rules for:
 - Roaming: the fish moves in a random direction.
@@ -19,6 +19,7 @@ For a coding base, i used the [Wolf Sheep Predation meh](http://ccl.northwestern
 
 ## 2.1 Significant design decisions and extensions
 Fishes and dolphins have their own separate parameters for speed and vision range, while another parameter exclusive to fishes is the reproduction rate, expressed in ticks. Fish reproduction can be turned off with the apposite switch.
+Vision is not limited to the agent's facing direction: their vision consists of a full circle around the agent's with radius as a parameter in the model. 
 Dolphins are only allowed to eat fishes if and only if they're in the same space as their prey. This is a result of the reference model i used, where wolves would eat sheep following the same condition.
 This led to giving the dolphins the ability to adjust their velocity to catch fishes if they're close than their current velocity, as otherwise they might get stuck in a back and forth exchange where the dolphin never reaches the fish for any speed difference greater than 0.
 
@@ -107,7 +108,11 @@ Cohesion ranges also didn't affect much the simulation, going against the predic
 The weights that regulate the cohesion and alignment of fishes did also not impact the environment, there were no improvement or difference in the way hunting was performed, but the direction and movement of fishes in the schooling environment differentiated greatly: as cohesion approached high values the schooling effect became more chaotic until it didn't ultimately resemble schooling behaviour; while alignment experienced similar but less chaotic results in fish movements, always experiencing a loss of the schooling behaviour.
 Maximum turn per tick was predicted to generate no difference in the experiments, and aside from the speed at which fishes form schooling, there isn't much to report.
 In conclusions, none of the new parameters involved substantially changed the survivability of fishes in a noticeable way compared to the changes in the previous model, and the only interesting study we can perform over the schooling is the different sizes it can have depending on cohesion ranges.
-The worsening of the fishes survivability also led to a state of equilibrium in an environment where fishes would previously overpopulate the earth, which was an interesting discovery.
+The worsening of the fishes survivability also led to a state of equilibrium in an environment where fishes would previously overpopulate the earth, which was an interesting discovery that will be discussed in later chapters.
+
+
+# 4 Hunting strategy model
+The third and final model studied implements a peer to peer communication system between our dolphin agents. This system aims to improve the hunting strategy of dolphins by communicating with each other the position of fishes based on 
 
 
 #
