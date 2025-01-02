@@ -153,4 +153,6 @@ To be more precise, the distribution of fish eaten per tick became more consiste
 Figure X: distribution plot of 2 experiment runs: dolphin communication range 10 (blue) and dolphin 0 communication range (red)
 
 As previously studied, this behaviour we see in the bell curve confirms once again the more consistent nature of the hunting behaviour, while it appears to not strictly improve the dolphins' hunting capabilities.
-#
+
+Higher and lower ranges of communication was observed to not impact hunting in a noticeable manner.
+# 5 Conclusions
