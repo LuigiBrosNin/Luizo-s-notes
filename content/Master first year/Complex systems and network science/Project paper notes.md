@@ -140,7 +140,7 @@ Max turn: 20
 Dolphin communication range: 8 cells
 
 ### 4.2.1 Hunting effectiveness
-The average length of simulations saw a decrease from the previous model, and the fish eaten per tick statistic got a bit higher across experiments, signaling that there was an improvement in the dolphin's hunting strategy. The dol
+The average length of simulations saw a decrease from the previous model, and the fish eaten per tick statistic got a bit higher across experiments, signaling that there was an improvement in the dolphin's hunting strategy. The dolphin population table shows us that 
 
 
 #
