@@ -158,4 +158,9 @@ Higher and lower ranges of communication was observed to not impact hunting in a
 # 5 Conclusions
 Summing up all experiments results and case studies, we learnt how each parameter had an impact in the simulation, and we made interesting discoveries regarding the environment we created.
 Going in order of experiments, we experienced how the fish population linearly impacts the length of the simulation, and the tame interaction the size of the population has on other parameters. Dolphin population, on the other hand, had shown heavy impact on the simulation, decreasing drastically the survivability of fishes, communicating more efficiently in bigger numbers and exploiting their position in a natural way by catching fishes even when they're faster than the predators.
-Vision ranges interestingly proved that 
+Vision ranges interestingly proved that a fish surivability increases dramatically when instead of trying to flee from danger, you avoid it entirely in the first place. It's the first experiment where fish agents reached the maximum agent numbers allowed in the tests, and caused overpopulation consistency even in later models, avoiding completely the communication hunting strategy of dolphins by means of prevention.
+We studied how delicate the equilibrium state can be due to the inconsistency of the dolphins to eat fishes, and how close we can get to an equilibrium state in the schooling model, which we also discovered it does not help fish survivability.
+Communication among predators in the environment led to a more consistent series of result that didn't seem too much affected by the range of their communication, a sign that despite the high churn experienced in the peer to peer model, dolphins can quickly adapt and replace nodes to find the next closest fish with no much impact on the overall simulation.
+
+## 5.1 Suggested improvements
+Schooling has proven to be a huge failure because of the results that went completely against the expectation 
