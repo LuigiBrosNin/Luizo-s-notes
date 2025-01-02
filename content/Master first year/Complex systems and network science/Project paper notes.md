@@ -146,6 +146,11 @@ Fish speed experiments confirm the more stable and consistent measures that the 
 ### 4.2.2 Equilibrium
 The state of equilibrium of the fish speed with reproduction model is completely changed due to the hunting strategy, and equilibrium is never reached because of the dolphins' ability to communicate. The change is also quite noticeable too, as the biggest change we have introducing the hunting model is a reduction in ticks where dolphins are roaming, thus making them more consistent hunters. This effect was not completely expected but it falls in line with the results in the vision range experiments of the previous model, where prevention of danger exceeded the results of a better fleeing ability. An alternative equilibria in the model has not been found trough the experiments conducted, although with the amount of data and knowledge of the parameters' effectiveness in changing the environment in favour of fishes and dolphins, it will be possible if not easier to find a state of equilibrium now that the eating times of dolphins are more consistent across runs.
 ### 4.3.3 Communication range
-The results of the experiments of communication range were harder to understand, but it seems that the results follow a bell curve distribution that differs slightly from the previous model results regarding fishes eaten per tick.
+The results of the experiments regarding communication ranges (experiments of model 3 n° 13) were harder to understand, but it seems that the results follow a bell curve distribution that differs slightly from the previous model results regarding fishes eaten per tick.
+To be more precise, the distribution of fish eaten per tick became more consistent when communication was in the mix, with a bell curve that is more focused on the central side of the curve, while in the experiment where dolphins don't communicate, the bell curve distributes its values on either ends, making them more spread out and varied.
 
+![[Pasted image 20250102181209.png]]
+Figure X: distribution plot of 2 experiment runs: dolphin communication range 10 (blue) and dolphin 0 communication range (red)
+
+As previously studied, this behaviour we see in the bell curve confirms once again the more consistent nature of the hunting behaviour, while it appears to not strictly improve the dolphins' hunting capabilities.
 #
