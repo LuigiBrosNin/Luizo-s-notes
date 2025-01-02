@@ -140,7 +140,6 @@ Max turn: 20
 Dolphin communication range: 8 cells
 
 ### 4.2.1 Hunting effectiveness
-The average length of simulations saw a decrease from the previous model, and the fish eaten per tick statistic got a bit higher across experiments, signaling that there was an improvement in the dolphin's hunting strategy. The dolphin population table shows us that, as predicted 
-
-
+The average length of simulations saw a decrease from the previous model, and the fish eaten per tick statistic got a bit higher across experiments, signaling that there was an improvement in the dolphin's hunting strategy. The dolphin population table shows us that, as expected, the number of dolphins greatly increases the effectiveness of the strategy due to the higher amount of communicating nodes in the system, what was more unexpected was the level of impact of the dolphin population size, which made smaller sizes more consistent in hunting and bigger sizes substantially better at hunting, with lower ticks and more consistent fishes consumed each tick in average.
+Fish speed experiments confirm the more stable and consistent measures that the  communication system now clearly causes. every measurement more closely fits each other run in the same category, largely because the ticks dolphin agents spent roaming are less common, and the time to eat each fish is more strictly .
 #
