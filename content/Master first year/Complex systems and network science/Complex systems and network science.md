@@ -1560,6 +1560,8 @@ example
 
 	- **model 3**
 
+- **[[models]]**
+
 - [[Presentation notes]]
 - [[Project Notes]]
 - [[Project paper notes]]

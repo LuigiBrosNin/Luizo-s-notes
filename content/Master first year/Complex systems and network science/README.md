@@ -3,10 +3,11 @@ An implementation of three agent-based models for a prey and predator system aim
 
 # Loading the models into NetLogo
 The models are written in [NetLogo 6.4](https://ccl.northwestern.edu/netlogo/download.shtml), which is required to run the models.
-In NetLogo, go to `File > Open` (or `Ctrl + O`) and open t
+In NetLogo, go to `File > Open` (or `Ctrl + O`) and Browse the files to open the desired model. 
+
+# Running the experiments
+Once the model is loaded, navigate `Tools > BehaviorSpace` (or `Ctrl + Shift + B`) to run the desired experiment.
 
 # Author
 
-Emanuele Di Sante  
-0001170266  
-[emanuele.disante@studio.unibo.it](mailto:emanuele.disante@studio.unibo.it)
+:LiRabbit: Luizo ofc, who else :)
