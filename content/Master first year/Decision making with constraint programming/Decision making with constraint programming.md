@@ -2,12 +2,12 @@
 
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
-Exam notes
-	exercises + oral exam (50/50 weight on the grade)
-	5 exercises, 2 deadlines for the first 2 and the remaining 3
-	deadlines: nov 1, dec 11
-	high grades, if you fail the oral you do not repeat the exercises (at least within the same year, idk about following years)
-	exercises uses MiniZinc
+- Exam notes
+	- exercises + oral exam (50/50 weight on the grade)
+	- 5 exercises, 2 deadlines for the first 2 and the remaining 3
+	- deadlines: nov 1, dec 11
+	- high grades, if you fail the oral you do not repeat the exercises (at least within the same year, idk about following years)
+	- exercises uses MiniZinc
 
 
 # Theory
@@ -459,13 +459,13 @@ approaches to develop specialized propagation for global constraints
 	**Maximal matching** -> largest possible matching
 
 	Algorithm for max matching finding
-	- compute all max matching (we asssume we do)
+	- compute all max matching (we assume we do)
 	- no max matching exists -> failure
 	- <u>edge free</u> in all maximal matchings (always black) ->
 		- remove the edge (remove value from domain in the corresponding variable)
 	- <u>vital</u> edge (always red)->
 		- keep the edge (assign value to corresponding variable)
-	- edge maching in some but not all maximal matchings ->
+	- edge matching in some but not all maximal matchings ->
 		- keep the edge
 	![[Pasted image 20241016165119.png]]
 
@@ -684,7 +684,7 @@ we'll focus on non-preemptive activities
 **Resources** -> asset available to execute operations (eg. capacity, number of seats in a classroom, num of available workers)
 
 ==Cumulative/Parallel Resource==
-**Cumulative/Parallel Resource** -> can execute multiple activities in paralel (activities can overlap over time, eg. a multi-core CPU)
+**Cumulative/Parallel Resource** -> can execute multiple activities in parallel (activities can overlap over time, eg. a multi-core CPU)
 
 ![[Pasted image 20241118144610.png]]
 - $r_k$ resource associated with capacity $c_k$
@@ -692,9 +692,8 @@ we'll focus on non-preemptive activities
 - total usage shouldn't exceed $c_k$ 
 - $d_i$ is duration
 Always related by a **cumulative constraint**
-$\forall r_{k}\in R$ with capacity $c_{k}$ -> 
-$$\text{cumulative}([S_1,...,S_n],[d_1,...,d_n],[rq_{1k},...,S_{nk}],c_{k}) 
-\iff \sum\limits_{i|S_{i}\le u < S_{i}d_{i}}rq_{ik}\le c_{k}\ \forall u \in D$$
+- $\forall r_{k}\in R$ with capacity $c_{k}$ -> 
+$$\text{cumulative}([S_1,...,S_n],[d_1,...,d_n],[rq_{1k},...,S_{nk}],c_{k})\iff \sum\limits_{i|S_{i}\le u < S_{i}d_{i}}rq_{ik}\le c_{k}\ \forall u \in D$$
 RCPSP resources are cumulative
 
 ==Unary/Disjunctive/Sequential Resource==
@@ -740,10 +739,10 @@ How can we prove optimality after the greedy algorythm?
 
 ==SetTimes Search strategy==
 Main idea:
-- On the first branch schedule an activity ai with minimum $EST_i$, schedule it at its $EST_i$.
+- On the first branch schedule an activity $a_i$ with minimum $EST_i$, schedule it at its $EST_i$.
 	- Break ties according to any rule.
-- On backtracking, postpone ai.
-	- When propagation updates $EST_i$, schedule ai.
+- On backtracking, postpone $a_i$.
+	- When propagation updates $EST_i$, schedule $a_i$.
 
 Works good B)
 doesn't work in Non-regular cost functions and side constraints that alter the problem structures (eg. maximal time legs)
@@ -795,7 +794,7 @@ Used to define neighbourhood structure
 Similar to Local search, but
 - adds a **diversification component** to iterative improvement for escaping from local minima
 	- allow worsening moves
-	- change neighbourhood structure during seatch
+	- change neighbourhood structure during search
 	- change objective function during search
 - Termination criteria
 	- max CPU time,
@@ -828,7 +827,7 @@ Basic principle -> learn correlations between good solution components
 - Ant colony Optimization (ACO)
 
 ==ACO==
-Pheromone trails are simulated by a parametrized probabilistic model "pheromone model"
+Pheromone trails are simulated by a parameterized probabilistic model "pheromone model"
 ![[Pasted image 20241127174907.png]]
 - Pheromone values are the set of parameters
 - They act as the memory to keep track of the process so as to intensify search around the best solution components

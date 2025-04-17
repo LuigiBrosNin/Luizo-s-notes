@@ -3,10 +3,18 @@
 - **[[attachments]]**
 - **[[Complementi di basi di dati]]**
 - **[[Complex systems and network science]]**
+- **[[Computer graphics]]**
+	- **[[attachments]]**
+
+- **[[Computer vision]]**
+	- **[[attachments]]**
+
 - **[[Decision making with constraint programming]]**
 - **[[Digital Forensics]]**
-	- [[Appunti Acquisizione]]
 - [[Intelligenza artificiale]]
+- **[[Matematica computazionale]]**
+	- **[[attachments]]**
+
 - [[Natural language processing]]
 - [[Simulazione di modelli]]
 - [[Social network analysis]]

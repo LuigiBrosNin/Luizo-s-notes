@@ -1,17 +1,17 @@
-[Slides in Google Drive](https://drive.google.com/drive/folders/17KWQxgAnnMr2mFXI0n22wykwv11ChkKX)
 
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
 - Exam info
-	Presentation like in the thesis of a paper in the drive "StudentCBD" folder
-	Free choice, no overlap in [here](https://docs.google.com/spreadsheets/d/1I6Xh7wFj9ozuUzDAtw-zrQxuRfPVNgecjnh66mFq3P0/edit?gid=1690026125#gid=1690026125) (you need to compile the [form](https://docs.google.com/forms/d/e/1FAIpQLSduUzBrGG8hvDghXlcx9u4DR4pRu9NUEl9nH9nt1YVwWx4CjQ/viewform) to get in) (links for 2024/25)
-	CHANGE THE REFERENCES FROM THE TEMPLATE PLS
-	You'll get the slides in google slides through mail after compiling the form
-	Presentation in 30m time, "expand the scopes of the paper"
+	- Presentation like in the thesis of a paper in the drive "StudentCBD" folder
+	- Free choice, no overlap in [here](https://docs.google.com/spreadsheets/d/1I6Xh7wFj9ozuUzDAtw-zrQxuRfPVNgecjnh66mFq3P0/edit?gid=1690026125#gid=1690026125) (you need to compile the [form](https://docs.google.com/forms/d/e/1FAIpQLSduUzBrGG8hvDghXlcx9u4DR4pRu9NUEl9nH9nt1YVwWx4CjQ/viewform) to get in) (links for 2024/25)
+	- CHANGE THE REFERENCES FROM THE TEMPLATE PLS
+	- You'll get the slides in google slides through mail after compiling the form
+	- Presentation in 30m time
+	- "expand the scopes of the paper"
 
 # Theory
 
-[Appunti Francesco Corigliano](https://risorse.students.cs.unibo.it/complementi-di-basi-di-dati/appunti/appunti-2022-francesco-corigliano.pdf?from=informatica-magistrale)
+[Appunti Francesco Corigliano](https://dynamik.vercel.app/complementi-di-basi-di-dati/appunti/appunti-2022-francesco-corigliano.pdf?from=informatica-magistrale)
 i studied here anyway (Italian notes)
 
 - [[#1 Intro Models|1 Intro Models]]
@@ -97,10 +97,8 @@ SQL/XML is a bridge for archiving locally these data in a relational manner
         - Name → given explicitly trough a constant
         - Content → you can specify any objects, elements or strings ( concat op → || )
         - attributes → optional list
-    - ==XMLATTRIBUTES== → params corresponding to attributes, default name as the attr name
-        
-        ![[complementi_basi_11.png]]        
-    - XMLFOREST → produces a list of simple elements, same params as XMLATRIBUTES
+    - ==XMLATTRIBUTES== → params corresponding to attributes, default name as the attr name        
+    - ==XMLFOREST== → produces a list of simple elements, same params as XMLATRIBUTES
         ![[Pasted image 20240918183123.png]]
                 
     - ==XMLCONCAT== → concats a forest of elements
@@ -116,7 +114,7 @@ SQL/XML is a bridge for archiving locally these data in a relational manner
 
 ## 2.3 XQuery - XQuery language
 
-XQuery <u>can be used to acces s XML</u> expressed data and has XSLT functions (e**X**tensible **S**tylesheet **L**anguage **T**ransformations).
+XQuery <u>can be used to access XML</u> expressed data and has XSLT functions (e**X**tensible **S**tylesheet **L**anguage **T**ransformations).
 
 XQuery operates on sequences, that can be ==atom values== (eg. “hello” string, “3” integer) or ==nodes==.
 
@@ -551,7 +549,7 @@ We need a pertinence-based ranking instead of an exact match, to accomodate the 
 
 - Tokenization → cut character sequence into word tokens
 - Normalization → map text terms to same “normal” form (eg. U.S.A and USA)
-- Lemmatization → reduce to simple correct forms (eg. the boy’s car are different colours → the boy care be different colours)
+- Lemmatization → reduce to simple correct forms (eg. the boy’s car are different colours → the boy car be different colours)
 - Stemming → different forms of a root to match (authorize, authorization)
 - Stop words → omit very common words (the, a, to, of)
 - Dictionary → lexical indexes, used for autocorrection too
@@ -823,7 +821,7 @@ we can use co-occurencies based on:
     
     $P(a,b)* \log\frac{P(a,b)}{P(a)P(b)}$
     
-4. ==Pearson’s Chi-squared (====$\chi^2$==﻿==)== → confronts the number of co-occurencies with the expected number of co-occurencies if the words were independent and normalizes it (dividing it) with the expected number
+4. ==Pearson’s Chi-squared== ($\chi^2$﻿) → confronts the number of co-occurencies with the expected number of co-occurencies if the words were independent and normalizes it (dividing it) with the expected number
     
     $\frac{(n_{ab}-N*\frac{n_a}{N}*\frac{n_b}{N})^2}{N*\frac{n_a}{N}*\frac{n_b}{N}}$
     
@@ -1128,11 +1126,9 @@ to solve the codification problem, we just code the strings into vectors (Vector
 
 
 
-# Summaries
-
 
 # Exam
-
+[[Domande esame con risposta]]
 
 
 
@@ -1140,6 +1136,7 @@ to solve the codification problem, we just code the strings into vectors (Vector
 %% Begin Waypoint %%
 - **[[attachments]]**
 
+- [[Domande esame con risposta]]
 - [[Marketplaces for Data Notes]]
 
 %% End Waypoint %%
