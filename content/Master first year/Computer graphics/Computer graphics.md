@@ -178,7 +178,8 @@ specular term in Phong's model is
 
 ==Shading==
 **Shading** (per fragment) -> assigning pixel colour. (How the lighting is used to color the pixels)
-
+We approximate shading
+**Flat shading** -> computing the average of the three vertices per polygon
 
 
 
