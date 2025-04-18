@@ -195,14 +195,22 @@ Artifacts (shortcomings) can get generated, eg.
 - Mach banding EFFECT (discontinuity in colour range causes a mistake in colouring)
 
 ==Phong shading==
-![[Pasted image 20250418174527.png]]
+![[Pasted image 20250418175649.png]]
 not into OpenGL
+- **Normals** computed for each vertex
+- **In rasterization stage** -> normal vectors are then interpolated across the face.
+- **Pixel color** -> apply Phong’s light model at every pixel inside face using interpolated normal vector
+computationally expensive, lighting after perspective projection
 
+Recap
+![[Pasted image 20250418175820.png]]
+
+
+### 3.3 Shadows & Transparency
 
 
 ###
 
-### Rendering Pipeline
 ###
 ##
 ###
