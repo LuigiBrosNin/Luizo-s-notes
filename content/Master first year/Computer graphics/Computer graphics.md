@@ -152,6 +152,12 @@ $n_s$ -> specular reflection exponent
 4. spot
 ![[Pasted image 20250418122111.png]]
 
+The way a particular material reflects light is referred to as a **reflection model**
+
+==Phong’s local illumination model==
+![[Pasted image 20250418125606.png]]
+
+
 
 
 ###
