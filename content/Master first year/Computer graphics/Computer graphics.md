@@ -142,7 +142,7 @@ $$K_{a,d,s,e}\in [0,1]$$
 - a -> ambient
 - d -> diffuse reflection coefficient
 - s -> specular reflection coefficient
-- e -> emissive
+- e -> emissive (self emission of light)
 $n_s$ -> specular reflection exponent
 
 ==Light==
