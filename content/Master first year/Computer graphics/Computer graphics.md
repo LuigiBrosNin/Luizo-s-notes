@@ -128,6 +128,14 @@ We determine colour of a point with
 used cuz it's simpler and faster to render
 
 ==Global model==
+![[Pasted image 20250418103050.png]]
+not fully compatible with a rendering pipeline
+
+==Light-material interactions==
+1. Specular
+2. Gloss
+3. Diffuse
+![[Pasted image 20250418103404.png]]
 
 
 
