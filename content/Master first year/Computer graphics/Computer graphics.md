@@ -181,8 +181,12 @@ specular term in Phong's model is
 We approximate shading
 **Flat shading** -> computing the average of the three vertices per polygon
 
+Improvements for flat shading
+- Evaluate phong at each pixel of the polygon
+- Vertex normals at each vertex to approximate better the real surface they represent, vertex normals can be provided by different methods 
 
-
+==Gouraud Shading==
+Normals computed at the vertices
 
 
 ###
