@@ -114,6 +114,23 @@ reflected or absorbed
 
 Translucent -> significant light transmission
 
+==Lighting models==
+- **Physically-based** -> model physics, use a rendering equation that describes how light interacts with materials
+- **Empirical** -> simple approximation, we follow rays of lights that reach the viewer directly and by reflection from surfaces
+
+We determine colour of a point with
+1. light sources
+2. reflection proprieties of the surface (material)
+3. illumination model that describes the interaction
+
+==Local model==
+![[Pasted image 20250418101725.png]]
+used cuz it's simpler and faster to render
+
+==Global model==
+
+
+
 #TODO slide 10 -> end
 
 ###
