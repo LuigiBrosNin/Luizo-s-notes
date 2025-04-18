@@ -186,7 +186,18 @@ Improvements for flat shading
 - Vertex normals at each vertex to approximate better the real surface they represent, vertex normals can be provided by different methods 
 
 ==Gouraud Shading==
-Normals computed at the vertices
+![[Pasted image 20250418174505.png]]
+- Normals computed at the vertices
+- Color at each vertex decided with normal and phong lighting
+- In rasterization stage, the color intensity is calculated by barycentric interpolation of the intensities at the vertices
+Artifacts (shortcomings) can get generated, eg. 
+- MISSING HIGHLIGHT and SPOTLIGHT effects
+- Mach banding EFFECT (discontinuity in colour range causes a mistake in colouring)
+
+==Phong shading==
+![[Pasted image 20250418174527.png]]
+not into OpenGL
+
 
 
 ###
