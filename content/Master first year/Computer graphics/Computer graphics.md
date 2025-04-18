@@ -158,14 +158,27 @@ The way a particular material reflects light is referred to as a **reflection mo
 ![[Pasted image 20250418125606.png]]
 $$I_{\lambda}=k_{e}+I_{a}k_{a}+I_{d}k_{d}+I_{S}k_{S}$$
 - $I_a$ -> ambient intensity
-- $I_d$ ->  $I_{l} \max(0,l*n)$ where $I_l=$Source light intensity, $l$ and $n$ from Lambert's cosine law
-- $I_S$ -> ambient intensity
+- $I_d$ -> diffusion intensity, $I_{l} \max(0,l*n)$ where $I_l=$Source light intensity, $l$ and $n$ from Lambert's cosine law
+- $I_S$ -> reflection intensity
 
 ==Lambert’s cosine law==
 ![[Pasted image 20250418142445.png]]
 - $l$ -> light direction
 - $n$ -> surface orientation 
 - $\theta$ -> angle between norma light and direction
+
+==Attenuation term==
+we account for attenuation of the intensity light based on $s$ distance traveled
+Decrease intensity with distance from light
+
+==Blinn-Phong Lighting Model==
+instead of recalculating the dot product like in Phong shading ($v\cdot r$) we use the halfway vector $h$
+specular term in Phong's model is
+![[Pasted image 20250418152356.png]]
+
+
+
+
 
 ###
 
