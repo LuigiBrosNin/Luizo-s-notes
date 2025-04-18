@@ -164,7 +164,7 @@ $$I_{\lambda}=k_{e}+I_{a}k_{a}+I_{d}k_{d}+I_{S}k_{S}$$
 ![[Pasted image 20250418142445.png]]
 - $l$ -> light direction
 - $n$ -> surface orientation 
-
+- $\theta$ -> 
 
 ###
 
