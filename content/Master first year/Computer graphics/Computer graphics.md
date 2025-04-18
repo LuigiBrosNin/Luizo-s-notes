@@ -177,7 +177,9 @@ specular term in Phong's model is
 ![[Pasted image 20250418152356.png]]
 
 ==Shading==
-Shading (per fragment): assigning pixel colour. (How the lighting is used to color the pixels).
+**Shading** (per fragment) -> assigning pixel colour. (How the lighting is used to color the pixels)
+
+
 
 
 
