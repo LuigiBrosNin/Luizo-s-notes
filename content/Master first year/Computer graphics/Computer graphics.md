@@ -158,13 +158,14 @@ The way a particular material reflects light is referred to as a **reflection mo
 ![[Pasted image 20250418125606.png]]
 $$I_{\lambda}=k_{e}+I_{a}k_{a}+I_{d}k_{d}+I_{S}k_{S}$$
 - $I_a$ -> ambient intensity
-- $I_d$ ->  
+- $I_d$ ->  $I_{l} \max(0,l*n)$ where $I_l=$Source light intensity, $l$ and $n$ from Lambert's cosine law
+- $I_S$ -> ambient intensity
 
 ==Lambert’s cosine law==
 ![[Pasted image 20250418142445.png]]
 - $l$ -> light direction
 - $n$ -> surface orientation 
-- $\theta$ -> 
+- $\theta$ -> angle between norma light and direction
 
 ###
 
