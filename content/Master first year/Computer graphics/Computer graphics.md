@@ -137,10 +137,22 @@ not fully compatible with a rendering pipeline
 3. Diffuse
 ![[Pasted image 20250418103404.png]]
 
+==Material properties==
+$$K_{a,d,s,e}\in [0,1]$$
+- a -> ambient
+- d -> diffuse reflection coefficient
+- s -> specular reflection coefficient
+- e -> emissive
+$n_s$ -> specular reflection exponent
+
+==Light==
+1. ambient -> fixed source, hits everything equally
+2. point
+3. directional
+4. spot
+![[Pasted image 20250418122111.png]]
 
 
-
-#TODO slide 10 -> end
 
 ###
 
