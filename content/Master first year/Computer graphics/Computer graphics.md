@@ -207,6 +207,9 @@ Recap
 
 
 ### 3.3 Shadows & Transparency
+==Soft and hard shadow==
+![[Pasted image 20250418180944.png]]
+
 
 
 ###
