@@ -139,10 +139,10 @@ not fully compatible with a rendering pipeline
 
 ==Material properties==
 $$K_{a,d,s,e}\in [0,1]$$
-- a -> ambient
-- d -> diffuse reflection coefficient
-- s -> specular reflection coefficient
-- e -> emissive (self emission of light)
+- $k_a$ -> ambient
+- $k_d$ -> diffuse reflection coefficient
+- $k_S$ -> specular reflection coefficient
+- $k_e$ -> emissive (self emission of light)
 $n_s$ -> specular reflection exponent
 
 ==Light==
@@ -156,8 +156,14 @@ The way a particular material reflects light is referred to as a **reflection mo
 
 ==Phong’s local illumination model==
 ![[Pasted image 20250418125606.png]]
+$$I_{\lambda}=k_{e}+I_{a}k_{a}+I_{d}k_{d}+I_{S}k_{S}$$
+- $I_a$ -> ambient intensity
+- $I_d$ ->  
 
-
+==Lambert’s cosine law==
+![[Pasted image 20250418142445.png]]
+- $l$ -> light direction
+- $n$ -> surface orientation 
 
 
 ###
