@@ -215,6 +215,27 @@ To simulate penumbra we blur shadows in image space (cheap but inaccurate)
 1. shadow on planar surfaces
 	- Draw the object primitives a second time, projected into the ground plane
 		![[Pasted image 20250425221831.png]]
+2. Shadow Map Algorithm
+	- Shadow computation similar to view computation (hidden surface removal)
+		![[Pasted image 20250425222713.png]]
+	- STEP 1: compute shadow map (depth from light source) first render the scene using the light source as view reference point; store the result in the shadow z-buffer (Depth image of visible polygons from light source)
+	- STEP 2: Render final image Next, the scene is rendered as usual, but with an extra test to see it the current fragment is in the shadow (by checking shadow z-buffer map to see if points are in shadow)
+	-  **Shadow Depth Maps**
+		- Shadow mapping uses textures called shadow maps.
+		- The depth values as seen from the light source are stored in a shadow map, and are then used in a second pass to generate shadows on the objects
+			![[Pasted image 20250425223031.png]]
+	- **LightMaps** -> generate shadow texture by capturing silhouettes of objects as seen from the light source. Project texture onto scene. must recalculate for moving lights
+3. Shadow volumes
+	- represent the volume of space in shadow
+	- Shoot a ray from the eye to the visible point, Increment/decrement a counter each time we intersect a shadow volume polygon  
+	- If the counter is not 0, the point is in shadow
+		![[Pasted image 20250425223848.png]]
+		![[Pasted image 20250425223916.png]]
+		
+
+==**Ambient Occlusion (AO)**== -> simulation of the shadowing caused by objects blocking the ambient light.
+![[Pasted image 20250425224109.png]]
+
 
 ###
 
