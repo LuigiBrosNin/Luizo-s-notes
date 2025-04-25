@@ -245,8 +245,20 @@ We need to render transparent surfaces in a back to front (far to near) order
 This is required because the transparent surface will modify the color already stored at the pixel (normally order doesn't matter)
 <u>We should render all opaque surfaces in a scene before rendering the transparent surfaces.</u>
 
-**Order-Independent Transparency OIT** -> per-pixel sorting
-
+**Order-Independent Transparency OIT** -> per-pixel sorting done in fragment shader (so that the programmer doesn't need any sorting of objects before rendering)
+Idea
+- Keep a list of colors for each pixel, 
+- sort them by depth, 
+- blend them together in the fragment shader.
+Algorithm
+1. Render Opaque object  
+2. Render Transparent object  
+	- All fragments are stored using per-pixel linked lists.  
+	- Store fragments: Color+alpha+depth (only the first K)  
+3. Resolve Transparent  
+	- each pixel in fragment shader sorts associated linked list.  
+	- blending fragments in sorted order with background.  
+	- output final fragments.
 ###
 
 ###
