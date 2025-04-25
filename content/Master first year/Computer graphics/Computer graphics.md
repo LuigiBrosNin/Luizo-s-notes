@@ -209,8 +209,12 @@ Recap
 ### 3.3 Shadows & Transparency
 ==Soft and hard shadow==
 ![[Pasted image 20250418180944.png]]
+To simulate penumbra we blur shadows in image space (cheap but inaccurate)
 
-
+==Fake/Generated Shadows==
+1. shadow on planar surfaces
+	- Draw the object primitives a second time, projected into the ground plane
+		![[Pasted image 20250425221831.png]]
 
 ###
 
