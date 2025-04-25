@@ -235,7 +235,17 @@ To simulate penumbra we blur shadows in image space (cheap but inaccurate)
 
 ==**Ambient Occlusion (AO)**== -> simulation of the shadowing caused by objects blocking the ambient light.
 ![[Pasted image 20250425224109.png]]
+1. **Ray casting** -> Rays are cast from every direction from a surface point. Uninterrupted rays  increase the brightness of the surface, while rays that intercept another object do not add any illumination.
+	![[Pasted image 20250425224619.png]]
+2. **Screen Space Ambient Occlusion (SSAO)** -> For every pixel, the fragment shader samples the depth values around the current pixel and tries to compute the amount of occlusion from each of the sampled points.
+==Transparency Rendering==
+Alpha channel material colour, defines opacity of an object (0 -> invisible 1 -> full opacity)
+==Rendering with transparency==
+We need to render transparent surfaces in a back to front (far to near) order  
+This is required because the transparent surface will modify the color already stored at the pixel (normally order doesn't matter)
+<u>We should render all opaque surfaces in a scene before rendering the transparent surfaces.</u>
 
+**Order-Independent Transparency OIT** -> per-pixel sorting
 
 ###
 
