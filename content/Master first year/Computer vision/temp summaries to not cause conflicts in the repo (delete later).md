@@ -54,7 +54,22 @@ find **Corresponding Points** (Local invariant features) between 2+ images of a 
 1. **Detection** of salient points
 	- **Repeatable**, find same keypoints in different views
 	- **Saliency**, find keypoints surrounded by informative patterns
+	- Speed
 2. **Description** of said points (what makes them unique)
-	- **Distinctive - Robustness Trade-off**, capture invariant info, disregard noise and 
+	- **Distinctive - Robustness Trade-off**, capture invariant info, disregard noise and img specific changes (light changes)
+	- **Compactness**, low memory and fast matching
+	- Speed
 3. **Matching** descriptors between images
+### Corner detectors
+corners are the perfect keypoints as they have changes in all directions
+
+**Moravec Interest Point Detector** -> Look at patches in the image and compute cornerness (8 neighboring patches, look for high variation)
+
+**Harris Corner Detector**
+1. Compute image gradients (how intensity changes)
+2. Build the structure tensor matrix $M$
+3. Compute the corner response $C=\det⁡(M)−k\cdot \text{trace}(M)^2$
+4. Threshold & NMS to pick the best corners
+
+
 ##
