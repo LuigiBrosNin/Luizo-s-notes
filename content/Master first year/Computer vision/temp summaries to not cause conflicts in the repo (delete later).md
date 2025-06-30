@@ -50,4 +50,11 @@ Parameter **sigma** controls smoothing degree and scale of features to detect (w
 ![[Pasted image 20250519164759.png]]
 ## 4. Local Features
 find **Corresponding Points** (Local invariant features) between 2+ images of a scene
+### Three-Stage pipeline
+1. **Detection** of salient points
+	- **Repeatable**, find same keypoints in different views
+	- **Saliency**, find keypoints surrounded by informative patterns
+2. **Description** of said points (what makes them unique)
+	- **Distinctive - Robustness Trade-off**, capture invariant info, disregard noise and 
+3. **Matching** descriptors between images
 ##
