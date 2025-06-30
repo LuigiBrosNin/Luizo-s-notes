@@ -164,8 +164,8 @@ We can approximate the gradient with:
 ### ==Noise==
 **Noise** causes problems in edge detection, we incorporate the smoothing process of the image when detecting edges (take the average of a group of pixels compared to the average of another group)
 
-==Prewitt and Sobel== -> operators to look around the pixel to reduce noise 
-- **Prewitt operator** -> approximating partial derivatives by central differences
+==Prewitt and Sobel== -> operators to look around the pixel to reduce noise impact, decide based on avg surrounding brightness difference
+- **Prewitt operator** -> approximates with central differences
 	![[Pasted image 20250227171204.png]]
 - **Sobel operator** -> Like prewitt, but central pixel weight doubles
 	![[Pasted image 20250227171301.png]]
