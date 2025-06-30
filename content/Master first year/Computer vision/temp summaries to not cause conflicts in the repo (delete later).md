@@ -158,6 +158,7 @@ Where:
 - $\tilde{M}$ -> 2D coordinates in the plane + 1 in homogeneous coordinates (quadruple)
 Simplifies calibration
 ### Lens distortion
-Barrel -> o
+Barrel -> outward bending
+Pinc
 
 ##
