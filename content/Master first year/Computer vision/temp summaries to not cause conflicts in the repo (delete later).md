@@ -107,8 +107,9 @@ DoG invariance
 ###  Matching process
 find closest corresponding point efficiently, classic Nearest Neighbour problem
 - distance used is the euclidean distance
-- 
-
-
-
+- ratio test of distances to eliminate 90% of false matches (distance to best match/second best), small ratio = confident match
+Indexing techniques are exploited for efficient NN-search
+- k-d tree
+- Best Bin First
+## 5. Camera Calibration TODO
 ##
