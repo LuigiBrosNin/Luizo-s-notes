@@ -111,5 +111,24 @@ find closest corresponding point efficiently, classic Nearest Neighbour problem
 Indexing techniques are exploited for efficient NN-search
 - k-d tree
 - Best Bin First
-## 5. Camera Calibration TODO
+## 5. Camera Calibration
+We need to measure 3D info accurately from the 2D img
+**Camera calibration** -> determining a camera's internal and external parameters (focal length, distortion / position, orientation).
+
+### Perspective projection
+3D point $M=[x,y,z]^T$ projected into 2D image point $m=[u,v]^T$
+Function:
+$$
+\begin{cases}u=\frac{f}{z}x\\ v=\frac{f}{z}y \end{cases}
+$$
+where:
+$f$ -> focal length
+$z$ -> depth (distance from the camera)
+This projection is **non-linear**, aka objects appear smaller with distance, all the rules of perspective
+### Projective Space
+we need to handle points at infinity
+**Projective space** ($P^{3}$) -> 4th coordinate for each point in 3D, $[x,y,z,w]$ 
+$w\in [0,1]$, 0 means point is at infinity
+
+
 ##
