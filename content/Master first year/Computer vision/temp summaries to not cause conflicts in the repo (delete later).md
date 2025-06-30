@@ -159,6 +159,6 @@ Where:
 Simplifies calibration
 ### Lens distortion
 Barrel -> outward bending
-Pinc
+Pincushion -> inward b
 
 ##
