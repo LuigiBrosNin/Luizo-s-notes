@@ -129,6 +129,14 @@ This projection is **non-linear**, aka objects appear smaller with distance, all
 we need to handle points at infinity
 **Projective space** ($P^{3}$) -> 4th coordinate for each point in 3D, $[x,y,z,w]$ 
 $w\in [0,1]$, 0 means point is at infinity
-
+Express **perspective projection** linearly using **matrix multiplication**:
+$$\tilde m = P\cdot \tilde M$$
+- $\tilde{M}$: 3D point in homogeneous coordinates $[x, y, z, 1]$
+- $\tilde{m}$: projected 2D image point $[u, v, 1]$
+- $P$: **Perspective Projection Matrix (PPM)**
+Canonical PPM (assuming $f=1$)
+$$P = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ \end{bmatrix}$$
+### Image Digitization
+continuous measurements into discrete p
 
 ##
