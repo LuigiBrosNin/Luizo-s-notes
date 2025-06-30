@@ -593,8 +593,6 @@ aka **artificially increasing your training dataset** by transforming the existi
 - **Cutout** → forces the network to learn **less obvious** features.
 - **Multi-scale training** → helps the model understand objects at **different sizes**.
 Data augmentation makes CNNs **more flexible and accurate on new data**
-
-
 ## 7. Object Detection
 We want to detect (is object there?) and localize (where is object?) objects in images
 A detection provides:
@@ -1029,8 +1027,8 @@ ViTs outperform CNNs on larger datasets, they require more data to perform well
 
 ## **Convolutional Neural Networks (CNNs)**
 
-- **What are the key layers in a CNN, and what roles do they play?  
-    **Convolutional layers: Extract features by applying filters to the input image.  
+- **What are the key layers in a CNN, and what roles do they play?**
+    Convolutional layers: Extract features by applying filters to the input image.  
     Pooling layers: Downsample feature maps to reduce computational complexity.  
     Normalization layers: Stabilize and speed up the learning process.
     
