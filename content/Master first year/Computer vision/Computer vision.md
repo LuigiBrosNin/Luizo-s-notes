@@ -164,10 +164,10 @@ We can approximate the gradient with:
 ### ==Noise==
 **Noise** causes problems in edge detection, we incorporate the smoothing process of the image when detecting edges (take the average of a group of pixels compared to the average of another group)
 
-==Prewitt and Sobel== -> operators for calculating weights
+==Prewitt and Sobel== -> operators to look around the pixel to reduce noise 
 - **Prewitt operator** -> approximating partial derivatives by central differences
 	![[Pasted image 20250227171204.png]]
-- **Sobel operator** -> central pixel weight
+- **Sobel operator** -> Like prewitt, but central pixel weight doubles
 	![[Pasted image 20250227171301.png]]
 ### ==Non-Maxima Suppression (NMS)==
 A good approach to detect edges consists in finding the **local maxima** of the absolute value of the derivative of the signal
