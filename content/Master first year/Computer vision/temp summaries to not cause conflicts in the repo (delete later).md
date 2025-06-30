@@ -85,6 +85,12 @@ Where:
 - $\sigma$ controls the scale (blur amount)
 - $*$ is convolution
 
+Multi-Scale Feature Detection (**Lindeberg**) -> makes us find which feature to extract at what scale
+- Use **scale-normalized derivatives** to detect features at their "natural" scale.
+- Normalize the filter responses (multiply by $\sigma$)
+- Search for **extrema** (maxima or minima) in **x, y, and $\sigma$**  i.e., in 3D.
 
+LoG -> second order derivative that detects **blobs** (circular structures)
+$$F(x, y, \sigma) = \sigma^2 \cdot \nabla^2 L(x, y, \sigma)$$
 
 ##
