@@ -292,6 +292,7 @@ Lindeberg method:
 
 LoG -> second order derivative that detects **blobs** (circular structures)
 $$F(x, y, \sigma) = \sigma^2 \cdot \nabla^2 L(x, y, \sigma)$$
+(We multiply/normalize by sigma to compensate for weaker derivatives at higher filters)
 ![[Pasted image 20250306162700.png]]
 
 ==Difference of Gaussian (DoG)==

@@ -88,9 +88,14 @@ Where:
 Multi-Scale Feature Detection (**Lindeberg**) -> makes us find which feature to extract at what scale
 - Use **scale-normalized derivatives** to detect features at their "natural" scale.
 - Normalize the filter responses (multiply by $\sigma$)
-- Search for **extrema** (maxima or minima) in **x, y, and $\sigma$**  i.e., in 3D.
+- Search for **extrema** (maxima or minima) in **x, y, and $\sigma$**  i.e., in 3D with LoG.
 
-LoG -> second order derivative that detects **blobs** (circular structures)
+**LoG** -> second order derivative that detects **blobs** (circular structures)
 $$F(x, y, \sigma) = \sigma^2 \cdot \nabla^2 L(x, y, \sigma)$$
+**DoG** -> approximation of LoG
+$$DoG=L(x,y,k\sigma)−L(x,y,\sigma)$$
+We build a pyramid of images blurred with different $\sigma$ and we compute the difference to find the extrema in 3D across (x,y, scale)
+- We prune keypoints on edges using the **hessian matrix**
+
 
 ##
