@@ -151,14 +151,36 @@ Where:
 
 CRF = Rotation matrix $\cdot$ WRF + Translation vector
 ### Homography $H$
-flat scene whose projection we can simplify to an homography
+flat scene whose projection we can simplify to an **homography**
 $$\tilde m = H\cdot \tilde M$$
 Where:
 - $H$ -> 3x3 matrix representing the **homography**
 - $\tilde{M}$ -> 2D coordinates in the plane + 1 in homogeneous coordinates (quadruple)
-Simplifies calibration
+Simplifies calibration, holds info about intrinsic parameters
 ### Lens distortion
-Barrel -> outward bending
-Pincushion -> inward b
+**Barrel** -> outward bending
+**Pincushion** -> inward bending
+we need to model non-linear functions to correct the image
+### What is calibration
+Calibration estimates:
+- **Intrinsic parameters** $A$ -> Capture multiple images of a **known pattern** (e.g., chessboard)
+- **Extrinsic parameters** $R, T$ -> Find **2D-3D correspondences** (image corner ↔ real-world corner)
+- **Lens distortion coefficients** -> projection equations
+### Zhang's method
+A Practical way to calibrate a real camera using images of a flat pattern
+1. use a flat target (all $z = 0$ )
+2. form $m \leftrightarrow M$ pairs, get homographies $H_{i}$
+3. Each homography relates image coordinates to pattern coordinates
+4.5 points per image needed to compute $H_{i}$
+### Summary
+| Concept        | What It Represents                                                      |
+| -------------- | ----------------------------------------------------------------------- |
+| $A$            | Intrinsic matrix (focal lengths, image center, skew)                    |
+| $R,T$          | Camera pose (extrinsics)                                                |
+| Homography $H$ | 2D projective mapping for planar scenes                                 |
+| Distortion     | Lens imperfections modeled with parameters                              |
+| Zhang’s Method | Practical way to calibrate a real camera using images of a flat pattern |
 
-##
+## Part 2
+---
+## 6. CNN recap (Convolutional Neural Networks) TODO
