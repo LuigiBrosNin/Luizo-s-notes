@@ -137,6 +137,6 @@ $$\tilde m = P\cdot \tilde M$$
 Canonical PPM (assuming $f=1$)
 $$P = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ \end{bmatrix}$$
 ### Image Digitization
-continuous measurements into discrete p
+continuous measurements into discrete pixel size, img origin
 
 ##
