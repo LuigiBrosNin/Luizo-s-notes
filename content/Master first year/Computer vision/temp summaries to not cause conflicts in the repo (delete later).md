@@ -95,7 +95,20 @@ $$F(x, y, \sigma) = \sigma^2 \cdot \nabla^2 L(x, y, \sigma)$$
 **DoG** -> approximation of LoG
 $$DoG=L(x,y,k\sigma)−L(x,y,\sigma)$$
 We build a pyramid of images blurred with different $\sigma$ and we compute the difference to find the extrema in 3D across (x,y, scale)
+- We reject low contrast responses
 - We prune keypoints on edges using the **hessian matrix**
+We get the optimal scale for each detail
+
+DoG invariance
+- **Scale** invariance
+- **Rotation** invariance (compute **canonical orientation** so that we have a new reference system different from the image's)
+### SIFT Descriptor
+**Scale Invariant Feature Transform** -> used to generate descriptors to match, outputs a feature vector based on grid subregions (takes small details from around the keypoint and remembers gradient orientation combinations)
+###  Matching process
+find closest corresponding point efficiently, classic Nearest Neighbour problem
+- distance used is the euclidean distance
+- 
+
 
 
 ##

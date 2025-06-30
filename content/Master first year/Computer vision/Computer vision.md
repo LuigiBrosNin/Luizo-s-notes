@@ -310,7 +310,7 @@ DoG helps us find the optimal scale for each detail we want to "classify"
 
 ### Invariance properties of DoG
  ✅ **Scale Invariance**
-- Use the image L(x,y,σ)L(x, y, \sigma)L(x,y,σ) at the **same scale** where the keypoint was detected.
+- Use the image $L(x, y, \sigma)$ at the **same scale** where the keypoint was detected.
  ✅ **Rotation Invariance**
 - Compute gradients around the keypoint.
 - Build a **histogram of gradient orientations** (e.g., 36 bins)
