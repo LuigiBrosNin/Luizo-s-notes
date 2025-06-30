@@ -6,9 +6,15 @@
 - **[[Computer graphics]]**
 	- **[[attachments]]**
 
+	- [[Insights Orale con la Morigi]]
+	- [[Make the project work on Linux]]
+	- [[Sunti per ripasso (ITA)]]
 - **[[Computer vision]]**
 	- **[[attachments]]**
 
+	- [[CV Insights and Summaries]]
+	- [[Project notes]]
+	- [[temp summaries to not cause conflicts in the repo (delete later)]]
 - **[[Decision making with constraint programming]]**
 - **[[Digital Forensics]]**
 - [[Intelligenza artificiale]]
@@ -16,7 +22,6 @@
 	- **[[attachments]]**
 
 - [[Natural language processing]]
-- [[Simulazione di modelli]]
 - [[Social network analysis]]
 - **[[UUX]]**
 
@@ -37,7 +42,7 @@ POSSIBLE ONES 3/4
 - [ ] **81678 - LABORATORIO DI MAKING** (chiedere com’e’) (interessante ma ho paura, sembra difficile, davoli + montori, software che si interfaccia con dispositivi)
 - [ ] COMPLEMENTI DI LINGUAGGI (interessante, ma ESAME+PROGETTO, e insegna Laneve)
 - [ ] ==**91269**== **- MULTIMEDIA DATA MANAGEMENT** (sembra interessante ed all purpose, ci daro’ un’occhiata piu’ avanti)
-- [x] UUX
+- [ ] UUX
 
   
 
