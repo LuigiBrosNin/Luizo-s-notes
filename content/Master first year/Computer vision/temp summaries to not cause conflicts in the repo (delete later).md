@@ -71,5 +71,20 @@ corners are the perfect keypoints as they have changes in all directions
 3. Compute the corner response $C=\det⁡(M)−k\cdot \text{trace}(M)^2$
 4. Threshold & NMS to pick the best corners
 
+Harris invariance properties
+- **Rotation** invariance
+- Partial **illumination** invariance (if contrast does not change)
+- No **scale** invariance
+### Scale-Space, LoG, DoG
+**Key finding** -> apply a <u>fixed-size detection</u> tool on increasingly <u>down-sampled</u> and <u>smoothed</u> versions of the input image (trough Laplacian of Gaussian or Difference of Gaussian, its approximation) (LoG, DoG)
+
+**Scale-space** -> group of the same image at different computed smoothed scales
+$$L(x,y,\sigma )=G(x,y,\sigma )∗I(x,y)$$
+Where:
+- G is the Gaussian kernel
+- $\sigma$ controls the scale (blur amount)
+- $*$ is convolution
+
+
 
 ##
