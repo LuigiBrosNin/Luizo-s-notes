@@ -401,7 +401,6 @@ $$M_{CRF} = \begin{bmatrix} R & T \\ 0 & 1 \end{bmatrix} M_{WRF}$$
 the **full PPM** becomes
 $$P=A⋅[R∣T]$$
 This gives us a powerful, complete model of how a 3D point becomes a 2D pixel.
-
 ### Homography $H$
 if the scene is flat, aka all 3D points lie on a plane, the projection simplifies to a **homography**
 $$\tilde m = H\cdot \tilde M$$

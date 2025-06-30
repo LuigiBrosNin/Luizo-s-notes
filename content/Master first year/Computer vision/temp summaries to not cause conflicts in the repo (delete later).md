@@ -138,5 +138,26 @@ Canonical PPM (assuming $f=1$)
 $$P = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ \end{bmatrix}$$
 ### Image Digitization
 continuous measurements into discrete pixel size, img origin
+Steps
+1. Scale by pixel dimensions $\Delta u, \Delta v$
+2. Shift the image center to pixel coordinates $(u_0,v_0)$
+**Intrinsic Parameter Matrix** $A$ -> captures internal characteristics of the camera
+$$A = \begin{bmatrix} f_x & s & u_0 \\ 0 & f_y & v_0 \\ 0 & 0 & 1 \end{bmatrix}$$
+Where:
+- $f_x = f \cdot k_u$ ->: focal length in horizontal pixels
+- $f_y = f \cdot k_v$ -> focal length in vertical pixels
+- $s$ -> skew (typically 0 for most modern cameras)
+- $(u_0, v_0)$ -> image center
+
+CRF = Rotation matrix $\cdot$ WRF + Translation vector
+### Homography $H$
+flat scene whose projection we can simplify to an homography
+$$\tilde m = H\cdot \tilde M$$
+Where:
+- $H$ -> 3x3 matrix representing the **homography**
+- $\tilde{M}$ -> 2D coordinates in the plane + 1 in homogeneous coordinates (quadruple)
+Simplifies calibration
+### Lens distortion
+Barrel -> o
 
 ##
