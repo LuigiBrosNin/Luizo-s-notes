@@ -31,3 +31,52 @@ Reduce noise in images
 	- Find local maxima along gradient
 	- Estimate direction locally (with Lerp from closest pixels)
 	- Thresholds
+6. Canny's criteria
+	1. Good detection
+	2. Good localization
+	3. One response, one edge
+7. Canny's edge detector PIPELINE
+	1. Gaussian smoothing
+	2. Gradient computation
+	3. Non-maxima suppression
+	4. **Hysteresis** thresholding
+8. 2nd order derivative methods
+	1. zero crossing
+	2. Laplacian operator (sum of 2nd order derivatives) approximation
+9. Laplacian of Gaussian (LoG) PIPELINE
+	1. Gaussian smoothing
+	2. Apply Laplacian operator
+	3. Find zero-crossings
+	4. localize edge at sign change
+10. Summary
+	- ![[Pasted image 20250519164759.png]]
+## 4. Local Features
+find **Local invariant features** (corresponding points) in images
+1. Three-stage pipeline
+	1. Detection
+	2. Description
+	3. Matching
+2. Properties
+	- Detector
+		- Repeatability  
+		- Saliency
+	- Descriptor
+		- Distinctiveness vs. Robustness Trade-off -> get invariant info
+		- Compactness
+	- Desirable **speed** for both
+3. Corner detectors
+	1. **Moravec detector** -> look at patches and compute cornerness (high variation)
+	2. **Harris corner detector** 
+		1. Compute gradients around point of interest, create matrix with results
+		2. Compute corner score with matrix
+		3. Threshold & NMS to pick the best corners
+	3. Invariance properties of harry's detector
+		1. Rotation invariance
+		2. Partial illumination invariance (only uniform shift)
+4. Scale space -> concept of same img at different scales
+5. Linderberg (multi-scale detection)
+	1. Use scale normalized derivatives
+	2. Normalize filter responses
+	3. Search extrema in 3D
+6. LoG -> second order derivative that detects **blobs** (circular structures)
+##
