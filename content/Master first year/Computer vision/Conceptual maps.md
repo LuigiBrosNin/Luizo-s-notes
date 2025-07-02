@@ -78,5 +78,43 @@ find **Local invariant features** (corresponding points) in images
 	1. Use scale normalized derivatives
 	2. Normalize filter responses
 	3. Search extrema in 3D
-6. LoG -> second order derivative that detects **blobs** (circular structures)
+6. Scale-normalized LoG -> filter (second order derivative) that detects **blobs** (circular structures)
+7. Difference of Gaussian (DoG) -> approx of Scale-normalized LoG, find extrema across results in 3F
+8. Invariance of DoG
+	1. Scale invariance
+	2. Rotation invariance (get canonical orientation, remember local coords)
+9. SIFT Descriptor -> Scale invariant feature transform
+	1. take 16x16 grid around keypoint
+	2. 4x4 subregion division
+	3. 8-bin histogram if gradient orientations
+	- output vector is compact and robust
+10. Matching process
+	1. Nearest neighbour search, doing it efficiently
+		1. k-d tree
+		2. Best Bin First
+## Camera Calibration
+determining a camera's internal/external parameters to measure 3D info from 2D images
+1. Perspective projection
+	- WRF to CRF with Focal length and depth calculations
+	- 4th coordinate for linear perspective projection
+2. DIgitization
+	1. Intrinsic parameter matrix A, focal length xy, skew, cenral points
+	2. Rotation matrix, Translation vector -> relation CRF = R cdot WRF + T
+3. Homography
+	1. simplified projection
+	2. taken from a flat image, depth 0
+	3. Get planar targets, estimate matrix A
+4. Lens distortion, Barrel / Pincushion
+5. Calibration estimates:
+	- **Intrinsic parameters** $A$
+	- **Extrinsic parameters** $R, T$
+	- **Lens distortion coefficients**
+6. Zhang's method -> computes homography
+7.  Main Pipeline (Zhang's method):
+8. **Acquire n images** of a planar pattern
+9. **Estimate homographies** $H_i$
+10. Use $H_i$​ to compute **intrinsic matrix $A$
+11. Use $A$ and $H_i$​ to compute $R_i, T_i$ for each image
+12. Estimate **lens distortion coefficients**
+13. Use **non-linear optimization** to refine all parameters by minimizing **reprojection error**
 ##
